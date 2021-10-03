@@ -1,0 +1,21 @@
+{
+    "name": "root",
+    "private": true,
+    "useWorkspaces": true,
+    "version": "0.0.0",
+    "author": "whutyzy <whutyzy@foxmail.com>",
+    "main": "index.js",
+    "npmClient": "yarn",
+    "workspaces": [
+        "packages/*"
+    ],
+    "license": "MIT",
+    "lint-staged": {
+        "*.{ts,tsx,js,vue,less}": "prettier --write",
+        "*.{ts,tsx,js,vue}": "eslint --fix",
+        "*.{vue,css,less}": "stylelint --fix"
+    },
+    "devDependencies": {
+        "lerna": "^4.0.0"
+    }
+}
