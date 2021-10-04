@@ -12,9 +12,9 @@ function getDevConfig(castConfig) {
         resolve: {
             extensions: constant_1.VITE_RESOLVE_EXTENSIONS,
             alias: {
-                '@config': SITE_CONFIG,
-                '@pc-routes': SITE_PC_ROUTES,
-                '@mobile-routes': SITE_MOBILE_ROUTES
+                '@config': constant_2.SITE_CONFIG,
+                '@pc-routes': constant_2.SITE_PC_ROUTES,
+                '@mobile-routes': constant_2.SITE_MOBILE_ROUTES
             }
         }
     };

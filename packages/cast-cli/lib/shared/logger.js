@@ -1,39 +1,45 @@
 "use strict";
-var chalk = require('chalk');
-var stripAnsi = require('strip-ansi');
-var readline = require('readline');
-var format = function (label, msg) { return msg.split('\n').map(function (line, i) { return (i === 0
-    ? label + " " + line
-    : line.padStart(stripAnsi(label).length)); }).join('\n'); };
-var chalkTag = function (msg) { return chalk.bgBlackBright.white.dim(" " + msg + " "); };
-exports.log = function (msg, tag) {
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.clearConsole = exports.error = exports.warn = exports.info = exports.log = void 0;
+var chalk_1 = __importDefault(require("chalk"));
+var readline_1 = __importDefault(require("readline"));
+var chalkTag = function (msg) { return chalk_1.default.bgBlackBright.white.dim(" " + msg + " "); };
+var log = function (msg, tag) {
     if (msg === void 0) { msg = ''; }
     if (tag === void 0) { tag = null; }
-    tag ? console.log(format(chalkTag(tag), msg)) : console.log(msg);
+    tag ? console.log(chalkTag(tag), msg) : console.log(msg);
 };
-exports.info = function (msg, tag) {
+exports.log = log;
+var info = function (msg, tag) {
     if (tag === void 0) { tag = null; }
-    console.log(format(chalk.bgBlue.black(' INFO ') + (tag ? chalkTag(tag) : ''), msg));
+    console.log(chalk_1.default.bgBlue.black(' INFO ') + (tag ? chalkTag(tag) : ''), msg);
 };
-exports.warn = function (msg, tag) {
+exports.info = info;
+var warn = function (msg, tag) {
     if (tag === void 0) { tag = null; }
-    console.warn(format(chalk.bgYellow.black(' WARN ') + (tag ? chalkTag(tag) : ''), chalk.yellow(msg)));
+    console.warn(chalk_1.default.bgYellow.black(' WARN ') + (tag ? chalkTag(tag) : ''), chalk_1.default.yellow(msg));
 };
-exports.error = function (msg, tag) {
+exports.warn = warn;
+var error = function (msg, tag) {
     if (tag === void 0) { tag = null; }
-    console.error(format(chalk.bgRed(' ERROR ') + (tag ? chalkTag(tag) : ''), chalk.red(msg)));
+    console.error(chalk_1.default.bgRed(' ERROR ') + (tag ? chalkTag(tag) : ''), chalk_1.default.red(msg));
     if (msg instanceof Error) {
         console.error(msg.stack);
     }
 };
-exports.clearConsole = function (title) {
+exports.error = error;
+var clearConsole = function (title) {
     if (process.stdout.isTTY) {
         var blank = '\n'.repeat(process.stdout.rows);
         console.log(blank);
-        readline.cursorTo(process.stdout, 0, 0);
-        readline.clearScreenDown(process.stdout);
+        readline_1.default.cursorTo(process.stdout, 0, 0);
+        readline_1.default.clearScreenDown(process.stdout);
         if (title) {
             console.log(title);
         }
     }
 };
+exports.clearConsole = clearConsole;
