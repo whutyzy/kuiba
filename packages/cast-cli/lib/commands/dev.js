@@ -35,36 +35,56 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var vite_1 = require("vite");
+exports.dev = exports.runDevServer = void 0;
+var webpack_1 = __importDefault(require("webpack"));
+var webpack_dev_server_1 = __importDefault(require("webpack-dev-server"));
 var fs_extra_1 = require("fs-extra");
+var portfinder_1 = require("portfinder");
+var logger_1 = require("../shared/logger");
 var constant_1 = require("../shared/constant");
-var compileSiteEntry_1 = require("../compiler/compileSiteEntry");
-var vite_config_1 = require("../config/vite.config");
+var webpack_dev_config_1 = require("../config/webpack.dev.config");
 var cast_config_1 = require("../config/cast.config");
 var lodash_1 = require("lodash");
-function default_1(cmd) {
+function runDevServer(port, config) {
     return __awaiter(this, void 0, void 0, function () {
-        var devConfig, inlineConfig, server;
+        var devServerConfig, server;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    process.env.NODE_ENV = 'development';
-                    (0, fs_extra_1.ensureDirSync)(constant_1.SRC_DIR);
-                    return [4 /*yield*/, (0, compileSiteEntry_1.buildSiteEntry)()];
+                    devServerConfig = (0, webpack_dev_config_1.getDevServerConfig)();
+                    devServerConfig.port = port;
+                    server = new webpack_dev_server_1.default(devServerConfig, (0, webpack_1.default)(config));
+                    return [4 /*yield*/, server.start()];
                 case 1:
-                    _a.sent();
-                    devConfig = (0, vite_config_1.getDevConfig)((0, cast_config_1.getCastConfig)());
-                    inlineConfig = (0, lodash_1.merge)(devConfig, cmd.force ? { server: { force: true } } : {});
-                    return [4 /*yield*/, (0, vite_1.createServer)()];
-                case 2:
-                    server = _a.sent();
-                    return [4 /*yield*/, server.listen()];
-                case 3:
                     _a.sent();
                     return [2 /*return*/];
             }
         });
     });
 }
-exports.default = default_1;
+exports.runDevServer = runDevServer;
+function dev() {
+    return __awaiter(this, void 0, void 0, function () {
+        var castConfig, config, port;
+        return __generator(this, function (_a) {
+            process.env.NODE_ENV = 'development';
+            (0, fs_extra_1.ensureDirSync)(constant_1.SRC_DIR);
+            castConfig = (0, cast_config_1.getCastConfig)();
+            config = (0, webpack_dev_config_1.getDevConfig)();
+            port = (0, lodash_1.get)(castConfig, 'port');
+            (0, portfinder_1.getPort)({ port: port }, function (err, pport) {
+                if (err) {
+                    (0, logger_1.error)(err);
+                    return;
+                }
+                runDevServer(port, config);
+            });
+            return [2 /*return*/];
+        });
+    });
+}
+exports.dev = dev;

@@ -1,10 +1,10 @@
 import path from 'path'
 import fs from 'fs-extra'
 import inquier from 'inquirer'
-import {resolve} from 'path'
-import { CWD, CLI_PACKAGE_JSON,GENERATORS_DIR } from '../shared/constant'
+import { resolve } from 'path'
+import { CWD, CLI_PACKAGE_JSON, TEMPLATES_DIR } from '../shared/constant'
 import PackageManager from '../services/PackageManager'
-import {log} from '../shared/logger'
+import { log } from '../shared/logger'
 import clearConsole from '../shared/clearConsole'
 
 function generatePackageJSON(name: string) {
@@ -36,13 +36,12 @@ export default async function create(name: string) {
             await fs.remove(targetDir)
         }
     }
-    await fs.copy(GENERATORS_DIR, targetDir)
+    await fs.copy(TEMPLATES_DIR, targetDir)
     generatePackageJSON(name)
-    const pm = new PackageManager(targetDir, 'yarn')
-    await pm.install()
+    /* const pm = new PackageManager(targetDir, 'yarn')
+    await pm.install() */
     clearConsole()
     log('\n依赖下载完成! 执行下列命令开始开发：\n')
     log(`cd ${name}`)
-    log(`${pm.bin === 'npm' ? 'npm run' : 'yarn'} dev`)
-    
+    // log(`${pm.bin === 'npm' ? 'npm run' : 'yarn'} dev`)
 }

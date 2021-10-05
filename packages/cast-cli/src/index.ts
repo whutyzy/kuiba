@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import dev from './commands/dev'
+import { dev } from './commands/dev'
 import  create from './commands/create'
 const version = require('../package.json').version
 const program = new Command()
