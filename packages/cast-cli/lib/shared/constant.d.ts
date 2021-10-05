@@ -15,3 +15,5 @@ export declare const SITE_DIR: string;
 export declare const SITE_CONFIG: string;
 export declare const SITE_PC_ROUTES: string;
 export declare const SITE_MOBILE_ROUTES: string;
+export declare const SITE_OUTPUT_PATH: string;
+export declare const SITE_PUBLIC_PATH: string;

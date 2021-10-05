@@ -1,1 +1,1 @@
-export declare function getCastConfig(): any;
+export declare function getCastConfig(syncConfig?: boolean): any;

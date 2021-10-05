@@ -39,6 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.create = void 0;
 var path_1 = __importDefault(require("path"));
 var fs_extra_1 = __importDefault(require("fs-extra"));
 var inquirer_1 = __importDefault(require("inquirer"));
@@ -96,4 +97,4 @@ function create(name) {
         });
     });
 }
-exports.default = create;
+exports.create = create;

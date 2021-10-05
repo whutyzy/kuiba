@@ -41,13 +41,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDevConfig = exports.getDevServerConfig = exports.HTML_WEBPACK_PLUGINS = void 0;
 var lodash_1 = require("lodash");
-var constant_1 = require("../shared/constant");
 var path_1 = require("path");
 var webpack_merge_1 = __importDefault(require("webpack-merge"));
 var webpackbar_1 = __importDefault(require("webpackbar"));
 var html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 var cast_config_1 = require("./cast.config");
 var webpack_base_config_1 = require("./webpack.base.config");
+var constant_1 = require("../shared/constant");
 var castConfig = (0, cast_config_1.getCastConfig)();
 exports.HTML_WEBPACK_PLUGINS = [
     new html_webpack_plugin_1.default(__assign({ template: constant_1.SITE_PC_HTML, filename: 'index.html' }, createHtmlPluginOptions('pc'))),

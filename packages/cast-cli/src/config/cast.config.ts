@@ -3,7 +3,7 @@ import { merge } from 'lodash'
 import { CAST_CONFIG, SITE_CONFIG } from '../shared/constant'
 import { outputFileSyncOnChange } from '../shared/fsUtils'
 
-export function getCastConfig() {
+export function getCastConfig(syncConfig?: boolean) {
     let config: any = {}
     if (pathExistsSync(CAST_CONFIG)) {
         config = require(CAST_CONFIG)
@@ -13,8 +13,8 @@ export function getCastConfig() {
     const defaultConfig = require(defaultConfigPath)
     const mergedConfig = merge(defaultConfig, config)
     const source = JSON.stringify(mergedConfig, null, 2)
-    outputFileSyncOnChange(SITE_CONFIG, source)
-
-
+    if (syncConfig) {
+        outputFileSyncOnChange(SITE_CONFIG, source)
+    }
     return mergedConfig
 }

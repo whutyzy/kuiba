@@ -42,6 +42,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dev = exports.runDevServer = void 0;
 var webpack_1 = __importDefault(require("webpack"));
 var webpack_dev_server_1 = __importDefault(require("webpack-dev-server"));
+var friendly_errors_webpack_plugin_1 = __importDefault(require("friendly-errors-webpack-plugin"));
 var fs_extra_1 = require("fs-extra");
 var portfinder_1 = require("portfinder");
 var logger_1 = require("../shared/logger");
@@ -57,6 +58,13 @@ function runDevServer(port, config) {
                 case 0:
                     devServerConfig = (0, webpack_dev_config_1.getDevServerConfig)();
                     devServerConfig.port = port;
+                    config.plugins.push(new friendly_errors_webpack_plugin_1.default({
+                        compilationSuccessInfo: {
+                            messages: ["Your application is running here: http://" + devServerConfig.host + ":" + port],
+                            notes: []
+                        },
+                        clearConsole: true
+                    }));
                     server = new webpack_dev_server_1.default(devServerConfig, (0, webpack_1.default)(config));
                     return [4 /*yield*/, server.start()];
                 case 1:

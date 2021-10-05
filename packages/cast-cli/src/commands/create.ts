@@ -17,7 +17,7 @@ function generatePackageJSON(name: string) {
     fs.writeFileSync(filePath, JSON.stringify(pkg, null, 2))
 }
 
-export default async function create(name: string) {
+export async function create(name: string) {
     console.log(name)
     const targetDir = path.join(process.cwd(), name)
     if (fs.existsSync(targetDir)) {
