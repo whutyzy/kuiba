@@ -19,3 +19,7 @@ export function outputFileSyncOnChange(path: string, code: string) {
         outputFileSync(path, code)
     }
 }
+
+export function isDir(file:string) {
+    return pathExistsSync(file) && lstatSync(file).isDirectory()
+}

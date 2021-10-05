@@ -9,6 +9,7 @@ export const CAST_CONFIG = resolve(CWD, 'cast.config.js')
 export const TEMPLATES_DIR = resolve(__dirname, '../../templates/sfc')
 export const CLI_PACKAGE_JSON = resolve(__dirname, '../../package.json')
 export const WEBPACK_RESOLVE_EXTENSIONS = ['.js', '.jsx', '.vue', '.ts', '.tsx', '.css', '.less']
+export const ESLINT_EXTENSIONS = ['.vue', '.ts', '.js', '.mjs', '.tsx', '.jsx']
 export const PRIMARY_COLOR = '#3a7afe'
 
 /*  site

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SITE_PUBLIC_PATH = exports.SITE_OUTPUT_PATH = exports.SITE_MOBILE_ROUTES = exports.SITE_PC_ROUTES = exports.SITE_CONFIG = exports.SITE_DIR = exports.SITE_PC_HTML = exports.SITE_PC_MAIN = exports.SITE_MOBILE_HTML = exports.SITE_MOBILE_MAIN = exports.PRIMARY_COLOR = exports.WEBPACK_RESOLVE_EXTENSIONS = exports.CLI_PACKAGE_JSON = exports.TEMPLATES_DIR = exports.CAST_CONFIG = exports.POSTCSS_CONFIG = exports.TS_CONFIG = exports.SRC_DIR = exports.CWD = void 0;
+exports.SITE_PUBLIC_PATH = exports.SITE_OUTPUT_PATH = exports.SITE_MOBILE_ROUTES = exports.SITE_PC_ROUTES = exports.SITE_CONFIG = exports.SITE_DIR = exports.SITE_PC_HTML = exports.SITE_PC_MAIN = exports.SITE_MOBILE_HTML = exports.SITE_MOBILE_MAIN = exports.PRIMARY_COLOR = exports.ESLINT_EXTENSIONS = exports.WEBPACK_RESOLVE_EXTENSIONS = exports.CLI_PACKAGE_JSON = exports.TEMPLATES_DIR = exports.CAST_CONFIG = exports.POSTCSS_CONFIG = exports.TS_CONFIG = exports.SRC_DIR = exports.CWD = void 0;
 var path_1 = require("path");
 exports.CWD = process.cwd();
 exports.SRC_DIR = (0, path_1.resolve)(exports.CWD, 'src');
@@ -10,6 +10,7 @@ exports.CAST_CONFIG = (0, path_1.resolve)(exports.CWD, 'cast.config.js');
 exports.TEMPLATES_DIR = (0, path_1.resolve)(__dirname, '../../templates/sfc');
 exports.CLI_PACKAGE_JSON = (0, path_1.resolve)(__dirname, '../../package.json');
 exports.WEBPACK_RESOLVE_EXTENSIONS = ['.js', '.jsx', '.vue', '.ts', '.tsx', '.css', '.less'];
+exports.ESLINT_EXTENSIONS = ['.vue', '.ts', '.js', '.mjs', '.tsx', '.jsx'];
 exports.PRIMARY_COLOR = '#3a7afe';
 /*  site
 ----------------------*/
