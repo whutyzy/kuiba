@@ -1,11 +1,11 @@
 import { get } from 'lodash'
-import { CWD, PRIMARY_COLOR, SITE_PC_HTML, SITE_MOBILE_HTML } from '../shared/constant'
 import { resolve } from 'path'
 import merge from 'webpack-merge'
 import WebpackBarPlugin from 'webpackbar'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { getCastConfig } from './cast.config'
 import {BASE_CONFIG} from './webpack.base.config'
+import { CWD, PRIMARY_COLOR, SITE_PC_HTML, SITE_MOBILE_HTML } from '../shared/constant'
 
 const castConfig = getCastConfig()
 
@@ -45,10 +45,11 @@ export function getDevServerConfig() {
     }
 }
 
-export function getDevConfig() {
+export  function getDevConfig() {
+    
     return merge(BASE_CONFIG, {
         mode: 'development',
-        devtool: 'source-map', 
+        devtool: 'source-map',
         optimization: {
             splitChunks: {
                 cacheGroups: {
