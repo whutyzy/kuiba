@@ -45,6 +45,7 @@ var fs_extra_1 = __importDefault(require("fs-extra"));
 var inquirer_1 = __importDefault(require("inquirer"));
 var path_2 = require("path");
 var constant_1 = require("../shared/constant");
+var PackageManager_1 = __importDefault(require("../services/PackageManager"));
 var logger_1 = require("../shared/logger");
 var clearConsole_1 = __importDefault(require("../shared/clearConsole"));
 function generatePackageJSON(name) {
@@ -58,7 +59,7 @@ function generatePackageJSON(name) {
 }
 function create(name) {
     return __awaiter(this, void 0, void 0, function () {
-        var targetDir, action;
+        var targetDir, action, pm;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -86,11 +87,14 @@ function create(name) {
                 case 4:
                     _a.sent();
                     generatePackageJSON(name);
-                    /* const pm = new PackageManager(targetDir, 'yarn')
-                    await pm.install() */
+                    pm = new PackageManager_1.default(targetDir, 'yarn');
+                    return [4 /*yield*/, pm.install()];
+                case 5:
+                    _a.sent();
                     (0, clearConsole_1.default)();
-                    (0, logger_1.log)('\n依赖下载完成! 执行下列命令开始开发：\n');
-                    (0, logger_1.log)("cd " + name);
+                    (0, logger_1.success)('\n依赖下载完成! 执行下列命令开始开发：\n');
+                    (0, logger_1.log)("cd " + name + "\n");
+                    (0, logger_1.log)("yarn dev");
                     return [2 /*return*/];
             }
         });

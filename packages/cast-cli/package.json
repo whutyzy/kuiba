@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "cli of cast-ui",
     "bin": {
-        "cast-cli": "./bin/index.js"
+        "cast-cli": "./lib/index.js"
     },
     "keywords": [
         "cli",
@@ -12,11 +12,11 @@
     "author": "whutyzy <whutyzy@foxmail.com>",
     "license": "MIT",
     "files": [
-        "generators",
-        "bin",
+        "templates",
+        "lib",
         "site",
         "tsconfig.json",
-        "varlet.default.config.js",
+        "cast.default.config.js",
         "preset.js",
         "CHANGELOG.md"
     ],

@@ -25,7 +25,7 @@ var warn = function (msg, tag) {
 exports.warn = warn;
 var success = function (msg, tag) {
     if (tag === void 0) { tag = null; }
-    console.log(chalk_1.default.bgGreen.black(' SUCCESS ') + (tag ? chalkTag(tag) : ''), chalk_1.default.green(msg));
+    console.log(chalk_1.default.bgGreen.black(' SUCCESS ') + (tag ? chalkTag(tag) : ''), msg);
 };
 exports.success = success;
 var error = function (msg, tag) {

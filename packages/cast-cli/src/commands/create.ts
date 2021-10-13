@@ -4,7 +4,7 @@ import inquier from 'inquirer'
 import { resolve } from 'path'
 import { CWD, CLI_PACKAGE_JSON, TEMPLATES_DIR } from '../shared/constant'
 import PackageManager from '../services/PackageManager'
-import { log } from '../shared/logger'
+import { log, success } from '../shared/logger'
 import clearConsole from '../shared/clearConsole'
 
 function generatePackageJSON(name: string) {
@@ -37,10 +37,11 @@ export async function create(name: string) {
     }
     await fs.copy(TEMPLATES_DIR, targetDir)
     generatePackageJSON(name)
-    /* const pm = new PackageManager(targetDir, 'yarn')
-    await pm.install() */
+    const pm = new PackageManager(targetDir, 'yarn')
+    await pm.install()
     clearConsole()
-    log('\n依赖下载完成! 执行下列命令开始开发：\n')
-    log(`cd ${name}`)
+    success('\n依赖下载完成! 执行下列命令开始开发：\n')
+    log(`cd ${name}\n`)
+    log(`yarn dev`)
     // log(`${pm.bin === 'npm' ? 'npm run' : 'yarn'} dev`)
 }

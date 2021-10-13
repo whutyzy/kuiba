@@ -17,16 +17,16 @@
   "scripts": {
     "husky": "husky install",
     "commit": "git-cz",
-    "dev": "varlet-cli dev",
-    "build": "varlet-cli build",
-    "compile": "varlet-cli compile",
-    "create": "varlet-cli create",
-    "lint": "varlet-cli lint",
+    "dev": "cast-cli dev",
+    "build": "cast-cli build",
+    "compile": "cast-cli compile",
+    "create": "cast-cli create",
+    "lint": "cast-cli lint",
     "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "genAllLog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "yarn compile && release-it",
-    "test": "varlet-cli jest",
-    "test:watch": "varlet-cli jest -w"
+    "test": "cast-cli jest",
+    "test:watch": "cast-cli jest -w"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
@@ -67,15 +67,15 @@
       "site/**",
       "public/**",
       "src/*/__tests__/**",
-      ".varlet/**"
+      ".cast/**"
     ],
     "extends": [
-      "@varlet"
+      "@cast"
     ]
   },
   "stylelint": {
     "extends": [
-      "@varlet/stylelint-config"
+      "@cast/stylelint-config"
     ],
     "ignoreFiles": [
       "es/**",
