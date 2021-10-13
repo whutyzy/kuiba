@@ -84,7 +84,7 @@ function dev() {
             castConfig = (0, cast_config_1.getCastConfig)();
             config = (0, webpack_dev_config_1.getDevConfig)();
             port = (0, lodash_1.get)(castConfig, 'port');
-            (0, portfinder_1.getPort)({ port: port }, function (err, pport) {
+            (0, portfinder_1.getPort)({ port: port }, function (err, port) {
                 if (err) {
                     (0, logger_1.error)(err);
                     return;

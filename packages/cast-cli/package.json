@@ -105,7 +105,8 @@
         "@types/hash-sum": "^1.0.0",
         "@types/jest": "^26.0.15",
         "@types/lodash": "^4.14.168",
-        "@types/webpack-dev-server": "^4.1.0"
+        "@types/webpack-dev-server": "^4.1.0",
+        "sass": "^1.42.1"
     },
     "peerDependencies": {
         "vue": "3.1.4"

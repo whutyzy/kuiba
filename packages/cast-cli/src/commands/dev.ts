@@ -32,12 +32,11 @@ export async function dev() {
     const castConfig = getCastConfig()
     const config = getDevConfig()
     const port = get(castConfig, 'port')
-    getPort({ port }, (err: Error, pport: number) => {
+    getPort({ port }, (err: Error, port: number) => {
         if (err) {
             error(err)
             return
         }
-
         runDevServer(port, config)
     })
 }

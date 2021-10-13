@@ -4,6 +4,7 @@ import merge from 'webpack-merge'
 import WebpackBarPlugin from 'webpackbar'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { getCastConfig } from './cast.config'
+import { CastSitePlugin } from '../compiler/compileSiteEntry'
 import {BASE_CONFIG} from './webpack.base.config'
 import { CWD, PRIMARY_COLOR, SITE_PC_HTML, SITE_MOBILE_HTML } from '../shared/constant'
 
@@ -46,7 +47,6 @@ export function getDevServerConfig() {
 }
 
 export  function getDevConfig() {
-    
     return merge(BASE_CONFIG, {
         mode: 'development',
         devtool: 'source-map',
@@ -67,6 +67,7 @@ export  function getDevConfig() {
                 name: 'Site development building',
                 color: PRIMARY_COLOR
             }),
+            new CastSitePlugin(),
             ...HTML_WEBPACK_PLUGINS
         ]
     })

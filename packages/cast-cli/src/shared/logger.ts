@@ -18,6 +18,10 @@ export const warn = (msg: string, tag = null) => {
     console.warn(chalk.bgYellow.black(' WARN ') + (tag ? chalkTag(tag) : ''), chalk.yellow(msg))
 }
 
+export const success = (msg: string, tag = null) => {
+    console.log(chalk.bgGreen.black(' SUCCESS ') + (tag ? chalkTag(tag) : ''), chalk.green(msg))
+}
+
 export const error = (msg:string|Error, tag = null) => {
     console.error(chalk.bgRed(' ERROR ') + (tag ? chalkTag(tag) : ''), chalk.red(msg))
     if (msg instanceof Error) {

@@ -9,7 +9,7 @@ export async function build() {
     ensureDirSync(SRC_DIR)
 
     const config = getBuildConfig()
-
+    
     webpack(config, (err, stats) => {
         err && logger.error(err.toString())
         stats?.hasErrors() && logger.error(stats.toString())

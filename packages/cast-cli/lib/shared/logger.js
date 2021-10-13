@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.clearConsole = exports.error = exports.warn = exports.info = exports.log = void 0;
+exports.clearConsole = exports.error = exports.success = exports.warn = exports.info = exports.log = void 0;
 var chalk_1 = __importDefault(require("chalk"));
 var readline_1 = __importDefault(require("readline"));
 var chalkTag = function (msg) { return chalk_1.default.bgBlackBright.white.dim(" " + msg + " "); };
@@ -23,6 +23,11 @@ var warn = function (msg, tag) {
     console.warn(chalk_1.default.bgYellow.black(' WARN ') + (tag ? chalkTag(tag) : ''), chalk_1.default.yellow(msg));
 };
 exports.warn = warn;
+var success = function (msg, tag) {
+    if (tag === void 0) { tag = null; }
+    console.log(chalk_1.default.bgGreen.black(' SUCCESS ') + (tag ? chalkTag(tag) : ''), chalk_1.default.green(msg));
+};
+exports.success = success;
 var error = function (msg, tag) {
     if (tag === void 0) { tag = null; }
     console.error(chalk_1.default.bgRed(' ERROR ') + (tag ? chalkTag(tag) : ''), chalk_1.default.red(msg));

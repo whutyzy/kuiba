@@ -46,6 +46,7 @@ var webpack_merge_1 = __importDefault(require("webpack-merge"));
 var webpackbar_1 = __importDefault(require("webpackbar"));
 var html_webpack_plugin_1 = __importDefault(require("html-webpack-plugin"));
 var cast_config_1 = require("./cast.config");
+var compileSiteEntry_1 = require("../compiler/compileSiteEntry");
 var webpack_base_config_1 = require("./webpack.base.config");
 var constant_1 = require("../shared/constant");
 var castConfig = (0, cast_config_1.getCastConfig)();
@@ -95,7 +96,8 @@ function getDevConfig() {
             new webpackbar_1.default({
                 name: 'Site development building',
                 color: constant_1.PRIMARY_COLOR
-            })
+            }),
+            new compileSiteEntry_1.CastSitePlugin()
         ], __read(exports.HTML_WEBPACK_PLUGINS), false)
     });
 }

@@ -84,7 +84,7 @@ function lint() {
                     spinner.succeed('prettier success');
                     stylelintPattern = ['./src/**/*.vue', './src/**/*.css', './src/**/*.sass'];
                     hasPackages = (0, fsUtils_1.isDir)((0, path_1.resolve)(constant_1.CWD, 'packages'));
-                    hasPackages && stylelintPattern.push('./packages/**/*.vue', './packages/**/*.css', './packages/**/*.less');
+                    hasPackages && stylelintPattern.push('./packages/**/*.vue', './packages/**/*.css', './packages/**/*.scss');
                     return [4 /*yield*/, (0, execa_1.default)('stylelint', __spreadArray(__spreadArray([], __read(stylelintPattern), false), ['--fix'], false))];
                 case 2:
                     _a.sent();

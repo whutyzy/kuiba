@@ -5,7 +5,7 @@ import { BASE_CONFIG } from './webpack.base.config'
 import { SITE_OUTPUT_PATH, PRIMARY_COLOR, SITE_PUBLIC_PATH } from '../shared/constant'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { HTML_WEBPACK_PLUGINS } from './webpack.dev.config'
-// import { VarletSitePlugin } from '../compiler/compileSiteEntry'
+import { CastSitePlugin } from '../compiler/compileSiteEntry'
 
 export function getBuildConfig() {
     return merge(BASE_CONFIG, {
@@ -21,6 +21,7 @@ export function getBuildConfig() {
                 name: 'Site production building',
                 color: PRIMARY_COLOR
             }),
+            new CastSitePlugin(),
             new CleanWebpackPlugin(),
             new CopyWebpackPlugin({
                 patterns: [{ from: SITE_PUBLIC_PATH, to: SITE_OUTPUT_PATH }]

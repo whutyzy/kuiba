@@ -36,7 +36,7 @@ var webpack_base_config_1 = require("./webpack.base.config");
 var constant_1 = require("../shared/constant");
 var clean_webpack_plugin_1 = require("clean-webpack-plugin");
 var webpack_dev_config_1 = require("./webpack.dev.config");
-// import { VarletSitePlugin } from '../compiler/compileSiteEntry'
+var compileSiteEntry_1 = require("../compiler/compileSiteEntry");
 function getBuildConfig() {
     return (0, webpack_merge_1.default)(webpack_base_config_1.BASE_CONFIG, {
         mode: 'production',
@@ -51,6 +51,7 @@ function getBuildConfig() {
                 name: 'Site production building',
                 color: constant_1.PRIMARY_COLOR
             }),
+            new compileSiteEntry_1.CastSitePlugin(),
             new clean_webpack_plugin_1.CleanWebpackPlugin(),
             new copy_webpack_plugin_1.default({
                 patterns: [{ from: constant_1.SITE_PUBLIC_PATH, to: constant_1.SITE_OUTPUT_PATH }]

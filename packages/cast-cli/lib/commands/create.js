@@ -62,7 +62,6 @@ function create(name) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    console.log(name);
                     targetDir = path_1.default.join(process.cwd(), name);
                     if (!fs_extra_1.default.existsSync(targetDir)) return [3 /*break*/, 3];
                     return [4 /*yield*/, inquirer_1.default.prompt([

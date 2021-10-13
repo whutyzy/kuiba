@@ -15,7 +15,7 @@ export async function lint() {
 
        const stylelintPattern = ['./src/**/*.vue', './src/**/*.css', './src/**/*.sass']
        const hasPackages = isDir(resolve(CWD, 'packages'))
-       hasPackages && stylelintPattern.push('./packages/**/*.vue', './packages/**/*.css', './packages/**/*.less')
+       hasPackages && stylelintPattern.push('./packages/**/*.vue', './packages/**/*.css', './packages/**/*.scss')
 
        await execa('stylelint', [...stylelintPattern, '--fix'])
        spinner.succeed('stylelint success')
