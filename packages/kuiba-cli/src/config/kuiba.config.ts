@@ -8,7 +8,7 @@ export function getKuibaConfig() {
     if (pathExistsSync(KUIBA_CONFIG)) {
         config = require(KUIBA_CONFIG)
     }
-    const defaultConfigPath = '../../cast.default.config.js'
+    const defaultConfigPath = '../../kuiba.default.config.js'
     delete require.cache[require.resolve(defaultConfigPath)]
     const defaultConfig = require(defaultConfigPath)
     const mergedConfig = merge(defaultConfig, config)
