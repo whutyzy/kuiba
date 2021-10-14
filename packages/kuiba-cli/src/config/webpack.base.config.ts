@@ -88,8 +88,7 @@ export const BASE_CONFIG = {
                 use: [
                     ...CSS_LOADERS,
                     {
-                        loader: 'sass-loader',
-                        options: { implementation: require('dart-sass') }
+                        loader: 'sass-loader'
                     }
                 ]
             },
