@@ -30,7 +30,11 @@ export async function compileDir(dir: string) {
     await Promise.all(
         dirs.map((fileName) => {
             const file = resolve(dir, fileName)
-            ;[TESTS_DIR_NAME, EXAMPLE_DIR_NAME, DOCS_DIR_NAME].includes(fileName) && removeSync(file)
+            if ([TESTS_DIR_NAME, EXAMPLE_DIR_NAME, DOCS_DIR_NAME].includes(fileName)) {
+                removeSync(file)
+                return Promise.resolve()
+            }
+           
             if (fileName === STYLE_DIR_NAME) {
                 return Promise.resolve()
             }

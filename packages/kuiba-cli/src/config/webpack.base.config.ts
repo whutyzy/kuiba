@@ -2,6 +2,8 @@ import { pathExistsSync } from 'fs-extra'
 import { ForkTsCheckerWebpackPlugin } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPlugin'
 import { VueLoaderPlugin } from 'vue-loader'
 import { WebpackPluginInstance } from 'webpack'
+import { get } from 'lodash'
+import { getKuibaConfig } from './kuiba.config'
 import { getPostcssOptions } from './postcss.config'
 import {
     SITE_CONFIG,
@@ -36,7 +38,7 @@ export function createBasePlugins() {
 }
 
 const VUE_LOADER = {
-    loader: 'vue-loader',
+    loader: require.resolve('vue-loader'),
     options: {
         compilerOptions: {
             preserveWhitespace: false
@@ -45,10 +47,10 @@ const VUE_LOADER = {
 }
 
 const CSS_LOADERS = [
-    'style-loader',
-    'css-loader',
+    require.resolve('style-loader'),
+    require.resolve('css-loader'),
     {
-        loader: 'postcss-loader',
+        loader: require.resolve('postcss-loader'),
         options: { postcssOptions: getPostcssOptions() }
     }
 ]
@@ -75,8 +77,20 @@ export const BASE_CONFIG = {
                 use: [VUE_LOADER]
             },
             {
+                test: /\.md$/,
+                use: [
+                    VUE_LOADER,
+                    {
+                        loader: require.resolve('@varlet/markdown-loader'),
+                        options: {
+                            style: get(getKuibaConfig(), 'highlight.style')
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(js|ts|jsx|tsx)$/,
-                use: 'babel-loader',
+                use: [require.resolve('babel-loader')],
                 exclude: /node_modules\/(?!(@kuiba\/cli))/
             },
             {
@@ -85,12 +99,7 @@ export const BASE_CONFIG = {
             },
             {
                 test: /\.(scss|sass)$/,
-                use: [
-                    ...CSS_LOADERS,
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
+                use: [...CSS_LOADERS, require.resolve('sass-loader')]
             },
             {
                 test: /\.(png|jpg|gif|jpeg|svg)$/,

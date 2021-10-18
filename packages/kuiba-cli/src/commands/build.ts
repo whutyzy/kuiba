@@ -1,4 +1,4 @@
-import webpack from 'webpack'
+    import webpack from 'webpack'
 import * as logger from '../shared/logger'
 import { ensureDirSync } from 'fs-extra'
 import { getBuildConfig } from '../config/webpack.build.config'

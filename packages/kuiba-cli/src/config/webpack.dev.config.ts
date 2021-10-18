@@ -37,7 +37,7 @@ export function getDevServerConfig() {
     const host = get(kuibaConfig, 'host')
     return {
         port: get(kuibaConfig, 'port'),
-        host: host === 'localhost' ? '0.0.0.0' : host,
+        host: host === 'localhost' ? 'localhost' : host,
         static: {
             directory: resolve(CWD, 'public')
         },

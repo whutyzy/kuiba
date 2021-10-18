@@ -1,5 +1,5 @@
 <template>
-  <div>pc</div>
+  <div>pc 2334</div>
 </template>
 
 <script>

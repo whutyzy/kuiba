@@ -1,0 +1,25 @@
+{
+    "name": "@kuiba/markdown-loader",
+    "version": "0.0.1",
+    "description": "markdown loader of kuiba",
+    "keywords": [
+        "loader",
+        "kuiba"
+    ],
+    "author": "whutyzy <whutyzy@foxmail.com>",
+    "homepage": "https://github.com/haoziqaq/varlet#readme",
+    "license": "MIT",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/haoziqaq/varlet.git"
+    },
+    "bugs": {
+        "url": "https://github.com/haoziqaq/varlet/issues"
+    },
+    "dependencies": {
+        "highlight.js": "^10.7.2",
+        "loader-utils": "^2.0.0",
+        "markdown-it": "^12.0.2"
+    }
+}

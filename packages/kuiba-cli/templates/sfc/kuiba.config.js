@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'Basic',
-  namespace: 'b',
-  title: 'Basic UI',
+  name: 'KuiBa',
+  namespace: 'kuiba',
+  title: 'KuiBa UI',
   logo: './logo.svg',
   useMobile: true,
   themes: {
@@ -21,7 +21,7 @@ module.exports = {
   pc: {
     redirect: '/home',
     title: {
-      'zh-CN': '一个组件库',
+      'zh-CN': '魁拔UI',
     },
     header: {
       i18n: null,
@@ -59,7 +59,7 @@ module.exports = {
   mobile: {
     redirect: '/home',
     title: {
-      'zh-CN': '一个组件库',
+      'zh-CN': '魁拔UI',
     },
     header: {
       i18n: null,

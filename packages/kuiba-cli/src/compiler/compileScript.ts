@@ -33,7 +33,6 @@ export async function compileScript(script: string, file: string) {
     code = replaceJSXExt(code as string)
     code = replaceTSExt(code as string)
     removeSync(file)
-    console.log(replaceExt(file, '.js'))
     writeFileSync(replaceExt(file, '.js'), code, 'utf-8')
 }
 

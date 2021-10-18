@@ -3,7 +3,7 @@ module.exports = {
     namespace: 'kuiba',
     host: 'localhost',
     port: 8080,
-    title: 'VARLET',
+    title: 'KUIBA',
     logo: 'https://varlet.gitee.io/varlet-ui/varlet_icon.png',
     defaultLanguage: 'zh-CN',
     highlight: {
@@ -20,7 +20,7 @@ module.exports = {
         menu: [],
         redirect: '/home',
         title: {
-            'zh-CN': 'Varlet 面向Vue3的Material风格移动端组件库',
+            'zh-CN': 'Kuiba 面向Vue3的Material风格移动端组件库',
             'en-US': 'Material design mobile components built for Vue3'
         },
         header: {
