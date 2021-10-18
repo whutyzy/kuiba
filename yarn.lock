@@ -1430,6 +1430,15 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
+"@kuiba/markdown-loader@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@kuiba/markdown-loader/-/markdown-loader-0.0.1.tgz#e4e27572110c6637823a73fa1e15058217512a7d"
+  integrity sha512-VGfAMuwLYJodbLf7NtKcYpeF+QbSuCZECBd4w0g2fushMfDcjPt/WBpof4T79n+SkqBPew054QwV8lI5WpYEew==
+  dependencies:
+    highlight.js "^10.7.2"
+    loader-utils "^2.0.0"
+    markdown-it "^12.0.2"
+
 "@lerna/add@3.21.0":
   version "3.21.0"
   resolved "https://registry.npm.taobao.org/@lerna/add/download/@lerna/add-3.21.0.tgz#27007bde71cc7b0a2969ab3c2f0ae41578b4577b"
@@ -7087,7 +7096,15 @@ html-escaper@^2.0.0:
   resolved "https://registry.npm.taobao.org/html-escaper/download/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha1-39YAJ9o2o238viNiYsAKWCJoFFM=
 
-html-minifier-terser@^5.0.1:
+html-loader@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/html-loader/-/html-loader-2.1.2.tgz#17eb111441e863a9308071ed876b4ba861f143df"
+  integrity sha512-XB4O1+6mpLp4qy/3qg5+1QPZ/uXvWtO64hNAX87sKHwcHkp1LJGU7V3sJ9iVmRACElAZXQ4YOO/Lbkx5kYfl9A==
+  dependencies:
+    html-minifier-terser "^5.1.1"
+    parse5 "^6.0.1"
+
+html-minifier-terser@^5.0.1, html-minifier-terser@^5.1.1:
   version "5.1.1"
   resolved "https://registry.nlark.com/html-minifier-terser/download/html-minifier-terser-5.1.1.tgz#922e96f1f3bb60832c2634b79884096389b1f054"
   integrity sha1-ki6W8fO7YIMsJjS3mIQJY4mx8FQ=
@@ -10268,7 +10285,7 @@ parse-url@^6.0.0:
     parse-path "^4.0.0"
     protocols "^1.4.0"
 
-parse5@6.0.1:
+parse5@6.0.1, parse5@^6.0.1:
   version "6.0.1"
   resolved "https://registry.nlark.com/parse5/download/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha1-4aHAhcVps9wIMhGE8Zo5zCf3wws=

@@ -1,5 +1,6 @@
 <template>
   <div>pc 2334</div>
+  <router-view />
 </template>
 
 <script>

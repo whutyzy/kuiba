@@ -13,6 +13,7 @@ module.exports = (api?: ConfigAPI, options: PresetOption = {}) => {
     const isTest = process.env.NODE_ENV === 'test'
 
     return {
+        compact: false,
         presets: [
             [
                 require.resolve('@babel/preset-env'),

@@ -1,4 +1,5 @@
 import { pathExistsSync } from 'fs-extra'
+import {resolve} from 'path'
 import { ForkTsCheckerWebpackPlugin } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPlugin'
 import { VueLoaderPlugin } from 'vue-loader'
 import { WebpackPluginInstance } from 'webpack'
@@ -63,10 +64,12 @@ export const BASE_CONFIG = {
     },
     resolve: {
         extensions: WEBPACK_RESOLVE_EXTENSIONS,
+        symlinks: false,
+
         alias: {
             '@config': SITE_CONFIG,
             '@pc-routes': SITE_PC_ROUTES,
-            '@mobile-routes': SITE_MOBILE_ROUTES
+            '@mobile-routes': SITE_MOBILE_ROUTES,
         }
     },
     stats: 'errors-warnings',
@@ -86,12 +89,12 @@ export const BASE_CONFIG = {
                             style: get(getKuibaConfig(), 'highlight.style')
                         }
                     }
-                ] 
+                ]
             },
             {
                 test: /\.(js|ts|jsx|tsx)$/,
                 use: [require.resolve('babel-loader')],
-                exclude: /node_modules\/(?!(@kuiba\/cli))/
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,

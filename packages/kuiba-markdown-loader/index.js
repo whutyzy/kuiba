@@ -35,10 +35,10 @@ function markdownLoader(source) {
         highlight
     })
     const html = cardWrapper(md.render(source))
-
+    console.log('markdown-loader:-------------------')
+    console.log(`<template>\n<div class="kuiba-site-doc" v-pre>${html}</div>\n</template>\n`)
+    console.log('end-----------------------------')
     return `<template>\n<div class="kuiba-site-doc" v-pre>${html}</div>\n</template>\n`
 }
-
-
 
 module.exports = markdownLoader
