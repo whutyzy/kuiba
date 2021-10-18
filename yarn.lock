@@ -2788,6 +2788,15 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@varlet/markdown-loader@^1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@varlet/markdown-loader/-/markdown-loader-1.20.0.tgz#7cb55be468a18950072e1ed17927a3928e14201e"
+  integrity sha512-VO140oZnJn5smClH9EWUPYcVvf+wh+BLZTgBj1hC0nU0fS76/1J5xw40t1MJ5FZGFCe5iWrcNuQiHtsMTyDdDg==
+  dependencies:
+    highlight.js "^10.7.2"
+    loader-utils "^2.0.0"
+    markdown-it "^12.0.2"
+
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/@vue/babel-helper-vue-transform-on/download/@vue/babel-helper-vue-transform-on-1.0.2.tgz#9b9c691cd06fc855221a2475c3cc831d774bc7dc"

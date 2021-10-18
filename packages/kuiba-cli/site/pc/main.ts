@@ -13,7 +13,9 @@ const redirect = get(config, 'pc.redirect')
 const mobileRedirect = get(config, 'mobile.redirect')
 
 redirect && routes.push({ path: '/:pathMatch(.*)*', redirect: `/${defaultLanguage}${redirect}` })
-console.log(routes)
+
+
 const router = createRouter({ history: createWebHashHistory(), routes })
 
 createApp(App).use(router).mount('#app')
+// createApp(App).mount('#app')

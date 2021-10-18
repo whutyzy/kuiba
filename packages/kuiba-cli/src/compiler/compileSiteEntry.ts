@@ -128,22 +128,6 @@ export async function buildPcSiteRoutes() {
 }
 
 export async function buildSiteEntry() {
-    console.log('build site entry')
     getKuibaConfig()
     await Promise.all([buildMobileSiteRoutes(), buildPcSiteRoutes()])
-}
-
-const PLUGIN_NAME = 'KuibaSitePlugin'
-
-export class KuibaSitePlugin {
-    apply(compiler: Compiler) {
-        if (process.env.NODE_ENV === 'production') {
-            compiler.hooks.beforeCompile.tapPromise(PLUGIN_NAME, buildSiteEntry)
-        } else {
-            const watcher: FSWatcher = chokidar.watch([SITE_EXAMPLE_GLOB, SITE_DOCS_GLOB, KUIBA_CONFIG])
-            watcher.on('add', buildSiteEntry).on('unlink', buildSiteEntry).on('change', buildSiteEntry)
-
-            compiler.hooks.watchRun.tapPromise(PLUGIN_NAME, buildSiteEntry)
-        }
-    }
 }

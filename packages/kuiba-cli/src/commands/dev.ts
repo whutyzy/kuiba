@@ -3,6 +3,7 @@ import WebpackDevServer from 'webpack-dev-server'
 import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin'
 import { ensureDirSync } from 'fs-extra'
 import { getPort } from 'portfinder'
+import { buildSiteEntry } from '../compiler/compileSiteEntry'
 import { error } from '../shared/logger'
 import { SRC_DIR } from '../shared/constant'
 import { getDevConfig, getDevServerConfig } from '../config/webpack.dev.config'
@@ -29,6 +30,7 @@ export async function runDevServer(port: number, config: any) {
 export async function dev() {
     process.env.NODE_ENV = 'development'
     ensureDirSync(SRC_DIR)
+    await buildSiteEntry()
     const kuibaConfig = getKuibaConfig()
     const config = getDevConfig()
     const port = get(kuibaConfig, 'port')

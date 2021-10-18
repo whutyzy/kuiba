@@ -81,12 +81,12 @@ export const BASE_CONFIG = {
                 use: [
                     VUE_LOADER,
                     {
-                        loader: require.resolve('@varlet/markdown-loader'),
+                        loader: require.resolve('@kuiba/markdown-loader'),
                         options: {
                             style: get(getKuibaConfig(), 'highlight.style')
                         }
                     }
-                ]
+                ] 
             },
             {
                 test: /\.(js|ts|jsx|tsx)$/,

@@ -4,7 +4,6 @@ import merge from 'webpack-merge'
 import WebpackBarPlugin from 'webpackbar'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { getKuibaConfig } from './kuiba.config'
-import { KuibaSitePlugin } from '../compiler/compileSiteEntry'
 import { BASE_CONFIG } from './webpack.base.config'
 import { CWD, PRIMARY_COLOR, SITE_PC_HTML, SITE_MOBILE_HTML } from '../shared/constant'
 
@@ -67,7 +66,6 @@ export function getDevConfig() {
                 name: 'Site development building',
                 color: PRIMARY_COLOR
             }),
-            new KuibaSitePlugin(),
             ...HTML_WEBPACK_PLUGINS
         ]
     })
