@@ -93,7 +93,7 @@ export const BASE_CONFIG = {
             {
                 test: /\.(js|ts|jsx|tsx)$/,
                 use: [require.resolve('babel-loader')],
-                exclude: /node_modules/
+                exclude: /node_modules\/(?!(@varlet\/cli))/
             },
             {
                 test: /\.css$/,

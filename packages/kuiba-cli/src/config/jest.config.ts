@@ -17,5 +17,5 @@ module.exports = {
         `!**/${TESTS_DIR_NAME}/**`
     ],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'vue'],
-    transformIgnorePatterns: ['/node_modules/']
+    transformIgnorePatterns: ['/node_modules/(?!(@kuiba/cli))']
 }
