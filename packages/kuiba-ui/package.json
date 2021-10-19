@@ -17,7 +17,7 @@
   "scripts": {
     "husky": "husky install",
     "commit": "git-cz",
-    "dev": "cast-cli dev",
+    "dev": "kuiba-cli dev",
     "build": "kuiba-cli build",
     "compile": "kuiba-cli compile",
     "create": "kuiba-cli create",
@@ -32,8 +32,7 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@kuiba/cli": "^0.0.4",
-    "vue": "3.1.4"
+    "@kuiba/cli": "^0.0.4"
   },
   "release-it": {
     "git": {

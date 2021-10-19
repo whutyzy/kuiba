@@ -32,8 +32,7 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@kuiba/cli": "^1.0 .0",
-    "vue": "3.1.4"
+    "@kuiba/cli": "^0.0.4"
   },
   "release-it": {
     "git": {

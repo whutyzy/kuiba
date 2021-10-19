@@ -65,11 +65,10 @@ export const BASE_CONFIG = {
     resolve: {
         extensions: WEBPACK_RESOLVE_EXTENSIONS,
         symlinks: false,
-
         alias: {
             '@config': SITE_CONFIG,
             '@pc-routes': SITE_PC_ROUTES,
-            '@mobile-routes': SITE_MOBILE_ROUTES,
+            '@mobile-routes': SITE_MOBILE_ROUTES
         }
     },
     stats: 'errors-warnings',

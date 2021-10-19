@@ -1,9 +1,9 @@
 {
-    "name": "@cast/cli",
-    "version": "0.0.4",
+    "name": "@kuiba/cli",
+    "version": "0.0.5",
     "description": "cli of kuiba-ui",
     "bin": {
-        "cast-cli": "./lib/index.js"
+        "kuiba-cli": "./lib/index.js"
     },
     "keywords": [
         "cli",
@@ -37,7 +37,6 @@
         "@babel/preset-typescript": "^7.14.5",
         "@commitlint/cli": "^11.0.0",
         "@commitlint/config-conventional": "^11.0.0",
-        "@kuiba/markdown-loader": "^0.0.1",
         "@release-it/conventional-changelog": "^3.3.0",
         "@varlet/markdown-loader": "^1.20.0",
         "@vue/babel-plugin-jsx": "^1.0.6",
@@ -85,7 +84,6 @@
         "stylelint": "^13.13.1",
         "ts-jest": "^26.5.1",
         "typescript": "^4.3.5",
-        "vue": "^3.2.19",
         "vue-jest": "^5.0.0-alpha.8",
         "vue-loader": "16.5.0",
         "vue-router": "4.0.0-rc.1",

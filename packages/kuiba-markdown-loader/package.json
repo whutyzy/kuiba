@@ -7,15 +7,15 @@
         "kuiba"
     ],
     "author": "whutyzy <whutyzy@foxmail.com>",
-    "homepage": "https://github.com/haoziqaq/varlet#readme",
+    "homepage": "https://github.com/whutyzy/kuiba#readme",
     "license": "MIT",
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/haoziqaq/varlet.git"
+        "url": "git+https://github.com/whutyzy/kuiba.git"
     },
     "bugs": {
-        "url": "https://github.com/haoziqaq/varlet/issues"
+        "url": "https://github.com/whutyzy/kuiba/issues"
     },
     "dependencies": {
         "highlight.js": "^10.7.2",

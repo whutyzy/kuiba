@@ -16,7 +16,6 @@
         "*.{vue,css,less}": "stylelint --fix"
     },
     "devDependencies": {
-        "@babel/eslint-parser": "^7.15.8",
         "cz-lerna-changelog": "^2.0.3",
         "execa": "^5.0.0",
         "lerna": "^3.22.1",
