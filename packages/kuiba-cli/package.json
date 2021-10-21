@@ -1,6 +1,6 @@
 {
     "name": "@kuiba/cli",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "cli of kuiba-ui",
     "bin": {
         "kuiba-cli": "./lib/index.js"
@@ -104,5 +104,5 @@
     "peerDependencies": {
         "vue": "3.1.4"
     },
-    "gitHead": "201a389306ddf7e7a9a5c5488f090768dd9424f8"
+    "gitHead": "b86dcacf701bdc602e3e236b4e0773ffefbe89fc"
 }
