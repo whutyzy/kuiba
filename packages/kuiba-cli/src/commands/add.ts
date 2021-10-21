@@ -62,20 +62,23 @@ test('test ${name} plugin', () => {
 
     const exampleTemplate = `\
 <template>
-  <app-type></app-type>
-  <${namespace}-${name}/>
+  <kuiba-demo-block>
+    <${namespace}-${name}/>
+  </kuiba-demo-block>
+ 
 </template>
 
 <script>
 import ${bigCamelizeName} from '..'
-import AppType from '@kuiba/cli/site/mobile/components/AppType'
+import DemoBlock from '../../../example-components/DemoBlock.vue'
+
 
 
 export default {
   name: '${bigCamelizeName}Example',
   components: {
     [${bigCamelizeName}.name]: ${bigCamelizeName},
-    AppType
+    'kuiba-demo-block': DemoBlock
   },
   setup() {
      return {}

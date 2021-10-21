@@ -7,21 +7,27 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 
+
 export default defineComponent({
   name: 'KuibaButton',
   props: {
-    color: {
-      type: String
-    },
-    onClick: {
-      type: Function as PropType<(e: Event) => void>
-    }
+    type: {type: String},
+    size: {type: String},
+    text: {type: String},
+    color: {type: String},
+    icon: {type: String},
+    'icon-prefix': {type: String},
+    'icon-position': {type: String},
+    plain: {},
+    round: {},
+    disabled: {},
+    loading: {} 
+
   },
   setup(props) {
-    const handleClick = (e: Event) => props.onClick?.(e)
-
+    
     return {
-      handleClick
+      
     }
   }
 })

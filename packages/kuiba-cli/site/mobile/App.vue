@@ -2,7 +2,7 @@
     <div class="mobile-site">
         <header class="mobile-site-header">
             <div class="mobile-site-header__icon">
-                <i @click="back" v-show="showBackIcon" class="iconfont kuiba-icon-arrow-left"></i>
+                <i @click="back" v-show="showBackIcon" class="kuiba-icon kuiba-icon-arrow-left"></i>
             </div>
             <div class="mobile-site-header__title">{{ title }}</div>
             <div class="mobile-site-header__menu"></div>
@@ -45,6 +45,10 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import '../style/var.scss';
+
+body {
+    background-color: #fff !important;
+}
 .mobile-site-header {
     position: fixed;
     z-index: 99;
@@ -61,7 +65,7 @@ export default defineComponent({
     }
     &__icon {
         text-align: center;
-        .iconfont {
+        .kuiba-icon {
             font-size: 24px;
         }
     }

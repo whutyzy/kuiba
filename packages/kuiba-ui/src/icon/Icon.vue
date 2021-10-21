@@ -1,12 +1,17 @@
 <template>
-  <div class="kuiba-icon"></div>
+  <i class="kuiba-icon"></i>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'KuibaIcon'
+  name: 'KuibaIcon',
+  props: {
+    color: {type: String, default: '#efefef'},
+    size: {type: [String, Number], default: '#efefef'},
+    'class-prefix': {type: String, default: '#efefef'}
+  }
 })
 </script>
 

@@ -1,13 +1,11 @@
 <template>
-  <app-type></app-type>
+ 
   <kuiba-icon/>
 </template>
 
 <script>
-import Icon from '..'
-import AppType from '@kuiba/cli/site/mobile/components/AppType'
-import { watchLang } from '@kuiba/cli/site/utils'
-import { use, pack } from './locale'
+import Icon from '../Icon.vue'
+import DemoBlock from '../../../example-components/DemoBlock.vue'
 
 export default {
   name: 'IconExample',
@@ -16,9 +14,6 @@ export default {
     AppType
   },
   setup() {
-
-     watchLang(use)
-
      return {
        pack
      }

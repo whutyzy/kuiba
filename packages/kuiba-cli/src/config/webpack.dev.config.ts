@@ -42,7 +42,7 @@ export function getDevServerConfig() {
         },
         allowedHosts: 'all',
         hot: true,
-        client: {logging: 'error'}
+        client: { logging: 'error' as any }
     }
 }
 

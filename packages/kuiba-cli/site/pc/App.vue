@@ -103,7 +103,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .kuiba-site__content {
     display: flex;
-    margin: 60px 0 0 220px;
+    padding: 60px 0 0 220px;
 }
 .kuiba-site-doc__container {
     flex: 1 0 0;

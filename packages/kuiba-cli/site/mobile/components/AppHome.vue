@@ -8,7 +8,8 @@
     </div>
     <div class="componemt-menu">
         <div v-for="component in components" @click="toComponent(component.doc)" class="component-menu__item">
-            {{ component.text[lang] }}
+            <span>{{ component.text[lang] }}</span>
+            <i class="kuiba-icon kuiba-icon-arrow-right"></i>
         </div>
     </div>
 </template>
@@ -43,11 +44,13 @@ export default {
 .logo-box {
     padding: 24px 0 0 16px;
     &__img {
+        position: relative;
+        top: -5px;
         width: 48px;
         height: auto;
     }
     &__desc {
-        margin: 0 0 40px;
+        padding-bottom: 24px;
         color: #455a6499;
         font-size: 14px;
     }
@@ -58,6 +61,8 @@ export default {
 }
 .component-menu {
     &__item {
+        display: flex;
+        justify-content: space-between;
         padding: 10px 16px;
         cursor: pointer;
         transition: all 0.3s;
@@ -66,6 +71,7 @@ export default {
         white-space: nowrap;
         color: #555;
         line-height: 20px;
+        font-size: 14px;
         &:hover {
             color: $primary-color;
         }
