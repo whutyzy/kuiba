@@ -69,8 +69,7 @@ test('test ${name} plugin', () => {
 <script>
 import ${bigCamelizeName} from '..'
 import AppType from '@kuiba/cli/site/mobile/components/AppType'
-import { watchLang } from '@kuiba/cli/site/utils'
-import { use, pack } from './locale'
+
 
 export default {
   name: '${bigCamelizeName}Example',
@@ -79,47 +78,10 @@ export default {
     AppType
   },
   setup() {
-
-     watchLang(use)
-
-     return {
-       pack
-     }
+     return {}
   }
 }
 </script>
-`
-
-    const localeIndexTemplate = `\
-// lib
-import _zhCN from '../../../locale/zh-CN'
-import _enCN from '../../../locale/en-US'
-// mobile example doc
-import zhCN from './zh-CN'
-import enUS from './en-US'
-import { useLocale, add as _add, use as _use } from '../../../locale'
-
-const { add, use: exampleUse, pack, packs, merge } = useLocale()
-
-const use = (lang: string) => {
-  _use(lang)
-  exampleUse(lang)
-}
-
-export { add, pack, packs, merge, use }
-
-// lib
-_add('zh-CN', _zhCN)
-_add('en-US', _enCN)
-// mobile example doc
-add('zh-CN', zhCN)
-add('en-US', enUS)
-`
-
-    const localTemplate = `\
-export default {
-
-}
 `
 
     const componentDir = resolve(SRC_DIR, name)
@@ -138,9 +100,6 @@ export default {
         outputFile(resolve(componentDir, 'index.ts'), indexTemplate),
         outputFile(resolve(testsDir, 'index.spec.js'), testsTemplate),
         outputFile(resolve(exampleDir, 'index.vue'), exampleTemplate),
-        outputFile(resolve(exampleLocalDir, 'index.ts'), localeIndexTemplate),
-        outputFile(resolve(exampleLocalDir, 'en-US.ts'), localTemplate),
-        outputFile(resolve(exampleLocalDir, 'zh-CN.ts'), localTemplate),
         outputFile(resolve(docsDir, 'zh-CN.md'), ''),
         outputFile(resolve(docsDir, 'en-US.md'), '')
     ])

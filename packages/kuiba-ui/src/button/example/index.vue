@@ -1,23 +1,17 @@
 <template>
-  <!-- <app-type>基本使用</app-type> -->
-  <!-- <basic-use/> -->
-
-  <!-- <app-type>修改颜色</app-type> -->
-  <modify-color/>
+    <kuiba-demo-block title="按钮类型">
+        <kuiba-button></kuiba-button>
+    </kuiba-demo-block>
 </template>
 
 <script>
 import Button from '../Button'
-// import AppType from '@cast/cli/site/mobile/components/AppType'
-import BasicUse from './BasicUse'
-import ModifyColor from './ModifyColor'
+import DemoBlock from '../../../example-components/DemoBlock.vue'
 
 export default {
   components: {
+    [DemoBlock.name]: DemoBlock,
     [Button.name]: Button,
-    // AppType,
-    BasicUse,
-    ModifyColor
   },
 }
 </script>

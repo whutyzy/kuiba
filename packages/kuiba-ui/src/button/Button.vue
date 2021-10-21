@@ -1,5 +1,5 @@
 <template>
-  <button class="basic-button" :style="{ background: color }">
+  <button class="kuiba-button" >
     <slot />
   </button>
 </template>
@@ -8,7 +8,7 @@
 import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
-  name: 'BButton',
+  name: 'KuibaButton',
   props: {
     color: {
       type: String
@@ -29,7 +29,4 @@ export default defineComponent({
 
 <style lang="scss">
 @import "./button.scss";
-.red{
-color:red
-}
 </style>
