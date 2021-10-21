@@ -1,6 +1,6 @@
 {
     "name": "@kuiba/markdown-loader",
-    "version": "0.0.3",
+    "version": "0.0.2",
     "description": "markdown loader of kuiba",
     "keywords": [
         "loader",
