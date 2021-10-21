@@ -1,8 +1,8 @@
 {
     "packages": [
-        "packages/cast-cli"
+        "packages/*"
     ],
-    "version": "0.0.2",
+    "version": "independent",
     "useWorkspaces": true,
     "npmClient": "yarn"
 }
