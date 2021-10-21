@@ -41,7 +41,8 @@ export function getDevServerConfig() {
             directory: resolve(CWD, 'public')
         },
         allowedHosts: 'all',
-        hot: true
+        hot: true,
+        client: {logging: 'error'}
     }
 }
 

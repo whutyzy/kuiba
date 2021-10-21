@@ -1,128 +1,74 @@
 <template>
-  <div class="logo">
-    <h1 class="varlet-home__title">
-      <img class="varlet-home__image" :src="logo" />
-      <span>{{ title }}</span>
-    </h1>
-    <h2 class="varlet-home__desc">{{ description[lang] }}</h2>
-  </div>
-  <var-cell
-    v-for="component in components"
-    :key="component.text"
-    @click="toComponent(component)"
-    v-ripple
-  >
-    <template #extra>
-      <var-icon name="chevron-right" size="14" />
-    </template>
-    <template #default>
-      {{ component.text[lang] }}
-    </template>
-  </var-cell>
+    <div class="logo-box">
+        <h1>
+            <span class="logo-box__title">{{ title }}</span>
+            <img :src="logo" class="logo-box__img" />
+        </h1>
+        <h2 class="logo-box__desc">{{ description }}</h2>
+    </div>
+    <div class="componemt-menu">
+        <div v-for="component in components" @click="toComponent(component.doc)" class="component-menu__item">
+            {{ component.text[lang] }}
+        </div>
+    </div>
 </template>
 
 <script>
 import config from '@config'
 import { useRouter } from 'vue-router'
 import { reactive, ref } from 'vue'
-import { watchLang, watchPlatform } from '../../utils'
+import { get } from 'lodash'
 
 export default {
-  name: 'AppHome',
-  setup() {
-    const title = ref(config?.title ?? '')
-    const logo = ref(config?.logo ?? '')
-    const description = ref(config?.mobile?.title ?? {})
-    const menu = ref(config?.pc?.menu ?? [])
-    const configComponents = menu.value.filter((item) => item.type === 2)
-    const components = reactive(configComponents)
-    const lang = ref('zh-CN')
-    const platform = ref('mobile')
-    const router = useRouter()
-
-    watchLang((newValue) => {
-      lang.value = newValue
-    })
-
-    watchPlatform((newValue) => {
-      platform.value = newValue
-    })
-
-    const toComponent = (component) => {
-      router.push({
-        path: `/${component.doc}`,
-        query: {
-          language: lang.value,
-          platform: platform.value,
-          replace: component.doc
-        },
-      })
+    name: 'AppHome',
+    setup() {
+        const title = ref(get(config, 'title'))
+        const logo = ref(get(config, 'logo'))
+        const description = ref(get(config, 'mobile.description'))
+        const menu = ref(get(config, 'pc.menu', []))
+        const lang = ref('zh-CN')
+        const configComponents = menu.value.filter((item) => item.type === 2)
+        const components = reactive(configComponents)
+        const router = useRouter()
+        const toComponent = (component) => {
+            router.push({ path: `/${component}`, query: { language: lang.value, replace: component.doc } })
+        }
+        return { title, logo, description, components, lang, toComponent }
     }
-
-    return {
-      components,
-      lang,
-      toComponent,
-      logo,
-      title,
-      description,
-    }
-  },
 }
 </script>
 
-<style scoped lang="less">
-@import '~@varlet/ui/es/styles/var';
-
-.logo {
-  height: 100px;
-  padding-top: 30px;
-  margin-bottom: 20px;
+<style lang="scss">
+@import '../../style/var.scss';
+.logo-box {
+    padding: 24px 0 0 16px;
+    &__img {
+        width: 48px;
+        height: auto;
+    }
+    &__desc {
+        margin: 0 0 40px;
+        color: #455a6499;
+        font-size: 14px;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+    }
 }
-
-.varlet-home__title {
-  margin: 0 0 16px;
-  font-size: 32px;
-}
-
-.varlet-home__title,
-.varlet-home__desc {
-  padding-left: 16px;
-  font-weight: normal;
-  line-height: 1;
-  user-select: none;
-}
-
-.varlet-home__desc {
-  margin: 0 0 40px;
-  color: rgba(69, 90, 100, 0.6);
-  font-size: 14px;
-}
-
-.varlet-home__image {
-  width: 32px;
-  height: 32px;
-}
-
-.varlet-home__image,
-.varlet-home__title span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.varlet-home__title span {
-  margin-left: 16px;
-}
-
-.var-cell {
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transition: all 0.3s;
-  color: #555;
-
-  &:hover {
-    color: var(--site-color-mobile-cell-hover);
-    background: var(--site-color-mobile-cell-hover-background);
-  }
+.component-menu {
+    &__item {
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #555;
+        line-height: 20px;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 </style>

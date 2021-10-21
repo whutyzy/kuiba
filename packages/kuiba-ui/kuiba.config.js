@@ -1,11 +1,11 @@
 module.exports = {
-  name: 'Basic',
-  namespace: 'b',
-  title: 'Basic UI',
-  logo: './logo.svg',
+  name: 'Kuiba',
+  namespace: 'kuiba',
+  title: 'Kuiba UI',
+  logo: './kuiba.png',
   useMobile: true,
   themes: {
-    'color-primary': '#009688',
+    'color-primary': '#A4EBF3',
     'color-link': '#009688',
     'color-type': '#009688',
     'color-progress': '#009688',
@@ -21,11 +21,11 @@ module.exports = {
   pc: {
     redirect: '/home',
     title: {
-      'zh-CN': '一个组件库',
+      'zh-CN': '魁拔UI',
     },
     header: {
       i18n: null,
-      github: 'https://github.com/haoziqaq/varlet',
+      github: 'https://github.com/whutyzy/kuiba',
     },
     menu: [
       {
@@ -43,6 +43,20 @@ module.exports = {
       },
       {
         text: {
+          'zh-CN': '快速开始',
+        },
+        doc: 'quickStart',
+        type: 3,
+      },
+      {
+        text: {
+          'zh-CN': '按需引入',
+        },
+        doc: 'importOnDemand',
+        type: 3,
+      },
+      {
+        text: {
           'zh-CN': '基础组件',
         },
         type: 1,
@@ -54,13 +68,21 @@ module.exports = {
         doc: 'button',
         type: 2,
       },
+      {
+        text: {
+          'zh-CN': 'Icon 图标',
+        },
+        doc: 'icon',
+        type: 2,
+      },
     ],
   },
   mobile: {
     redirect: '/home',
     title: {
-      'zh-CN': '一个组件库',
+      'zh-CN': '魁拔UI',
     },
+    description: '基于vue3的移动端组件库',
     header: {
       i18n: null,
     },

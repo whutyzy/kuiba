@@ -1,0 +1,116 @@
+@import './reset.scss';
+body {
+    background-color: #f7f8fa;
+}
+.kuiba-doc-intro {
+    text-align: center;
+    h2 {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+}
+
+.kuiba-site-doc {
+    .card {
+        margin-bottom: 24px;
+        padding: 24px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 12px #ebedf0;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: #323233;
+    }
+    h1 {
+        font-weight: normal;
+        line-height: 1.5;
+        margin: 0 0 30px;
+        font-size: 30px;
+    }
+    h2 {
+        margin-bottom: 18px;
+    }
+    h3 {
+        margin-bottom: 12px;
+    }
+    p {
+        color: #34495e;
+        font-size: 15px;
+        line-height: 26px;
+    }
+    ul,
+    ol {
+        li {
+            position: relative;
+            margin: 5px 0 5px 10px;
+            padding-left: 15px;
+            color: #34495e;
+            font-size: 15px;
+            line-height: 26px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                box-sizing: border-box;
+                width: 6px;
+                height: 6px;
+                margin-top: 10px;
+                border: 1px solid #666;
+                border-radius: 50%;
+                content: '';
+            }
+        }
+    }
+    code {
+        position: relative;
+        display: block;
+        padding: 16px;
+        overflow-x: auto;
+        color: #58727e;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+        line-height: 26px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        -webkit-font-smoothing: auto;
+        background-color: #fafafa;
+        border-radius: 16px;
+    }
+    table {
+        width: 100%;
+        margin-top: 12px;
+        color: #34495e;
+        font-size: 14px;
+        line-height: 1.5;
+        border-collapse: collapse;
+        code {
+            display: inline;
+            margin: 0 2px;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-family: inherit;
+            word-break: keep-all;
+            background-color: #f7f8fa;
+            border-radius: 4px;
+        }
+        td {
+            &:first-child {
+                padding-left: 0;
+            }
+            padding: 8px;
+            border-top: 1px solid #f1f4f8;
+        }
+        th {
+            &:first-child {
+                padding-left: 0;
+            }
+            padding: 8px 10px;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+}

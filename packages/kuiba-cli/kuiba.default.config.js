@@ -4,7 +4,7 @@ module.exports = {
     host: 'localhost',
     port: 8080,
     title: 'KUIBA',
-    logo: 'https://varlet.gitee.io/varlet-ui/varlet_icon.png',
+    logo: '',
     defaultLanguage: 'zh-CN',
     highlight: {
         /**

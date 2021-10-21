@@ -136,54 +136,31 @@ export default {
 
 | 参数 | 说明 | 类型 | 默认值 | 
 | --- | --- | --- | --- | 
-| `type` | 类型， 可选值为 `default` `primary` `info` `success` `warning` `danger` | _string_ | `default` |
-| `size` | 尺寸， 可选值为 `normal` `mini` `small` `large` | _string_ | `normal` |
-| `loading` | 加载状态 | _boolean_ | `false` |  
+| type | 类型， 可选值为 `default` `primary` `info` `success` `warning` `danger` | _string_ | `default` |
+| size | 尺寸， 可选值为 `normal` `mini` `small` `large` | _string_ | `normal` |
+| loading | 加载状态 | _boolean_ | `false` |  
 | `loading-radius` | loading的半径，只作用于 `loading-type="circle"` 时 | _string \| number_ | `12` |
-| `loading-type` | loading的类型，可选值为 `circle` `wave` `cube` `rect` `disappear` | _string_ | `circle` |
-| `loading-size` | loading的尺寸，可选值为 `large` `normal` `small` `mini` 不作用于 `loading-type="circle"` 时 | _string_ | `normal` |
-| `round` | 是否是圆形按钮 | _boolean_ | `false` | 
-| `block` | 是否是块级元素 | _boolean_ | `false` | 
-| `text` | 是否是文字按钮 | _boolean_ | `false` |
-| `outline` | 是否使用外边框 | _boolean_ | `false` |
-| `disabled` | 禁用状态 | _boolean_ | `false` |
-| `ripple` | 是否使用水波纹 | _boolean_ | `true` |
-| `text-color` | 文字颜色 | _string_ | `-` |
-| `color` | 背景颜色 | _string_ | `-` |
+| loading-type | loading的类型，可选值为 `circle` `wave` `cube` `rect` `disappear` | _string_ | `circle` |
+| loading-size | loading的尺寸，可选值为 `large` `normal` `small` `mini` 不作用于 `loading-type="circle"` 时 | _string_ | `normal` |
+| round | 是否是圆形按钮 | _boolean_ | `false` | 
+| block | 是否是块级元素 | _boolean_ | `false` | 
+| text | 是否是文字按钮 | _boolean_ | `false` |
+| outline | 是否使用外边框 | _boolean_ | `false` |
+| disabled | 禁用状态 | _boolean_ | `false` |
+| ripple | 是否使用水波纹 | _boolean_ | `true` |
+| text-color | 文字颜色 | _string_ | `-` |
+| color | 背景颜色 | _string_ | `-` |
 
 ### 事件
 
 | 事件名 | 说明 | 参数 |
 | --- | --- | --- |
-| `click` | 点击按钮时触发， 在 `loading` 或 `disabled` 状态为 `true` 时不触发 | `event: Event` |
-| `touchstart` | 触摸手指压下按钮时触发， 在 `loading` 或 `disabled` 状态为 `true` 时不触发 | `event: Event` |
+| click | 点击按钮时触发， 在 `loading` 或 `disabled` 状态为 `true` 时不触发 | `event: Event` |
+| touchstart | 触摸手指压下按钮时触发， 在 `loading` 或 `disabled` 状态为 `true` 时不触发 | `event: Event` |
 
 ### 插槽
 
 | 插槽名 | 说明 | 参数 |
 | --- | --- | --- |
-| `default` | 按钮内容 | `-` |
+| default | 按钮内容 | `-` |
 
-### 样式变量
-以下为组件使用的css变量,可以使用[StyleProvider组件](#/zh-CN/style-provider)进行样式定制
-
-| 变量名 | 默认值 |
-| --- | --- |
-| `--button-default-color` | `#f5f5f5` |
-| `--button-primary-color` | `var(--color-primary)`|
-| `--button-danger-color` |  `var(--color-danger)`|
-| `--button-success-color` | `var(--color-success)`|
-| `--button-warning-color` |  `var(--color-warning)`|
-| `--button-info-color` | `var(--color-info)`|
-| `--button-disabled-color` | `var(--color-disabled)`|
-| `--button-disabled-text-color` | `#bdbdbd` |
-| `--button-border-radius` | `4px` |
-| `--button-mini-padding` | `0 9px` |
-| `--button-small-padding` | `0 11px` |
-| `--button-normal-padding` | `0 15px` |
-| `--button-large-padding` | `0 22px` |
-| `--button-round-padding` | `6px` |
-| `--button-mini-height` | `20px` |
-| `--button-small-height` | `28px` |
-| `--button-normal-height` | `36px` |
-| `--button-large-height` | `44px` |

@@ -1,22 +1,17 @@
 <template>
-  <div class="app-type">
-    <slot />
-  </div>
+  <div class="kuiba-icon"></div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'AppType',
+  name: 'KuibaIcon'
 })
 </script>
 
 <style lang="scss">
-.app-type {
-  width: 100%;
-  padding: 15px 0;
-  color: #888;
-  font-size: 14px;
+.kuiba-icon {
+  display: flex;
 }
 </style>

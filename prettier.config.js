@@ -6,5 +6,7 @@ module.exports = {
     bracketSpacing: true,
     proseWrap: 'always',
     semi: false,
-    trailingComma: 'none'
+    bracketLine: true,
+    trailingComma: 'none',
+    proseWrap: 'preserve'
 }

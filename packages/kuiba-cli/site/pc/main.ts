@@ -5,7 +5,7 @@ import { get } from 'lodash'
 import routes from '@pc-routes'
 // @ts-ignore
 import config from '@config'
-
+import '../style/main.scss'
 import App from './App.vue'
 
 const defaultLanguage = get(config, 'defaultLanguage')
@@ -14,8 +14,18 @@ const mobileRedirect = get(config, 'mobile.redirect')
 
 redirect && routes.push({ path: '/:pathMatch(.*)*', redirect: `/${defaultLanguage}${redirect}` })
 
-
 const router = createRouter({ history: createWebHashHistory(), routes })
+
+Object.defineProperty(window, 'onMobileRouteChange', {
+    value: (path: string, language: string, replace: string) => {
+        if (path === mobileRedirect) {
+            router.replace(`/${language}/${replace}`)
+            return
+        }
+
+        router.replace(`/${language}${path}`)
+    }
+})
 
 createApp(App).use(router).mount('#app')
 // createApp(App).mount('#app')
