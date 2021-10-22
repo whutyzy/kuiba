@@ -59,33 +59,6 @@
     "*.{ts,tsx,js,vue}": "eslint --fix",
     "*.{vue,css,scss}": "stylelint --fix"
   },
-  "eslintConfig": {
-    "root": true,
-    "ignorePatterns": [
-      "es/**",
-      "umd/**",
-      "site/**",
-      "public/**",
-      "src/*/__tests__/**",
-      ".kuiba/**"
-    ],
-    "extends": [
-      "@kuiba"
-    ]
-  },
-  "stylelint": {
-    "extends": [
-      "@kuiba/stylelint-config"
-    ],
-    "ignoreFiles": [
-      "es/**",
-      "umd/**",
-      "site/**",
-      "coverage/**",
-      "public/**",
-      "highlight/**"
-    ]
-  },
   "browserslist": [
     "Chrome >= 51",
     "iOS >= 10"

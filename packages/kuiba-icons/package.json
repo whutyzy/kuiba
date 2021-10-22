@@ -1,7 +1,7 @@
 {
-    "name": "@vant/icons",
-    "version": "1.7.0",
-    "description": "vant icons",
+    "name": "@kuiba/icons",
+    "version": "0.0.1",
+    "description": "kuiba icons",
     "main": "./src/config.js",
     "types": "./src/config.d.ts",
     "files": [
