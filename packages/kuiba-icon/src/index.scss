@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "kuiba-icon"; /* Project id 2881971 */
+  src: url('//at.alicdn.com/t/font_2881971_kfw637oetce.woff2?t=1634870259436') format('woff2'),
+       url('//at.alicdn.com/t/font_2881971_kfw637oetce.woff?t=1634870259436') format('woff'),
+       url('//at.alicdn.com/t/font_2881971_kfw637oetce.ttf?t=1634870259436') format('truetype');
+}
+
+.kuiba-icon {
+  font-family: "kuiba-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kuiba-icon-warning:before {
+  content: "\e62c";
+}
+
+.kuiba-icon-arrow-down:before {
+  content: "\ef25";
+}
+
+.kuiba-icon-arrow-up:before {
+  content: "\ef2a";
+}
+
+.kuiba-icon-plus:before {
+  content: "\e67b";
+}
+
+.kuiba-icon-close-cross:before {
+  content: "\e688";
+}
+
+.kuiba-icon-success:before {
+  content: "\e6b6";
+}
+
+.kuiba-icon-arrow-right:before {
+  content: "\e628";
+}
+
+.kuiba-icon-github:before {
+  content: "\e63a";
+}
+
+.kuiba-icon-arrow-left:before {
+  content: "\e685";
+}
