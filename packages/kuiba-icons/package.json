@@ -1,6 +1,6 @@
 {
     "name": "@kuiba/icons",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "kuiba icons",
     "main": "./src/config.js",
     "types": "./src/config.d.ts",
