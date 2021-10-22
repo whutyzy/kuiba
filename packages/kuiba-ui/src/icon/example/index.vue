@@ -1,6 +1,6 @@
 <template>
- 
-  <kuiba-icon/>
+  <kuiba-demo-block title="Icon 图标"> </kuiba-demo-block>
+  <kuiba-icon />
 </template>
 
 <script>
@@ -11,12 +11,12 @@ export default {
   name: 'IconExample',
   components: {
     [Icon.name]: Icon,
-    AppType
+    [DemoBlock.name]: DemoBlock
   },
   setup() {
-     return {
-       pack
-     }
-  }
+    return {
+      
+    }
+  },
 }
 </script>

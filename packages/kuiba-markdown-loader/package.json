@@ -6,6 +6,10 @@
         "loader",
         "kuiba"
     ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "author": "whutyzy <whutyzy@foxmail.com>",
     "homepage": "https://github.com/whutyzy/kuiba#readme",
     "license": "MIT",
