@@ -1,7 +1,7 @@
 <template>
   <div class="kuiba-demo-block">
-    <h4 class="kuiba-demo-block__title">{{title}}</h4>
-    <div class="kuiba-demo-block__container"></div>
+    <h4 class="kuiba-demo-block__title">{{ title }}</h4>
+    <div class="kuiba-demo-block__container"><slot></slot></div>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'KuibaDemoBlock',
-  props: {title: {type: String}},
+  props: { title: { type: String } },
   setup() {},
 })
 </script>

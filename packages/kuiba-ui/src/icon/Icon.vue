@@ -4,20 +4,20 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import { isNumber } from '../utils/shared'
+import { addUnit } from '../utils/format/unit'
 
 export default defineComponent({
   name: 'KuibaIcon',
   props: {
     name: { type: String },
-    color: { type: String, default: '#323233' },
-    size: { type: [String, Number], default: '12px' },
+    color: { type: String },
+    size: { type: [String, Number] },
     classPrefix: { type: String, default: 'kuiba-icon' },
   },
   setup(props) {
     const { name, color, size, classPrefix } = props
     const iconClass = computed(() => `${classPrefix} ${classPrefix}-${name}`)
-    const iconStyle = computed(() => ({ color, 'font-size': isNumber(size) ? size + 'px' : size }))
+    const iconStyle = computed(() => ({ color, fontSize: addUnit(size) }))
 
     return { iconClass, iconStyle }
   },
@@ -25,8 +25,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.kuiba-icon {
-  display: inline-block;
-  position: relative;
-}
+@import '~@kuiba/icons/src/index.scss';
 </style>

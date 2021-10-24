@@ -61,22 +61,35 @@
             }
         }
     }
-    code {
-        position: relative;
-        display: block;
-        padding: 16px;
-        overflow-x: auto;
-        color: #58727e;
-        font-weight: 400;
+    p code {
+        display: inline;
+        margin: 0 2px;
+        padding: 2px 5px;
         font-size: 14px;
-        font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
-        line-height: 26px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        -webkit-font-smoothing: auto;
-        background-color: #fafafa;
-        border-radius: 16px;
+        font-family: inherit;
+        word-break: keep-all;
+        background-color: #f7f8fa;
+        border-radius: 4px;
     }
+    pre {
+        code {
+            position: relative;
+            display: block;
+            padding: 16px;
+            overflow-x: auto;
+            color: #58727e;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;
+            line-height: 26px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            -webkit-font-smoothing: auto;
+            background-color: #fafafa;
+            border-radius: 16px;
+        }
+    }
+
     table {
         width: 100%;
         margin-top: 12px;

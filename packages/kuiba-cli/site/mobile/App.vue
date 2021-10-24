@@ -45,10 +45,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 @import '../style/var.scss';
-
-body {
-    background-color: #fff !important;
-}
 .mobile-site-header {
     position: fixed;
     z-index: 99;

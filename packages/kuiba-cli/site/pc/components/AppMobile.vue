@@ -24,11 +24,11 @@ export default {
 .kuiba-site-mobile {
     margin-top: 20px;
     width: 375px;
-    height: calc(100vh - 100px);
+    height: 725px;
     flex-shrink: 0;
     margin-right: 38px;
     overflow: hidden;
     box-shadow: 0 0 14px 6px #eee;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 </style>
