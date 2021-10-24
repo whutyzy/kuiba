@@ -12,7 +12,7 @@ import { Icon } from 'kuiba'
 
 Vue.use(Icon)
 ```
-
+## 代码演示
 ### 基础用法
 
 Icon 的 `name` 属性传入图标名称即可
