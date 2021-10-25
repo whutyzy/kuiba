@@ -1,6 +1,6 @@
 {
     "name": "@kuiba/cli",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "cli of kuiba-ui",
     "bin": {
         "kuiba-cli": "./lib/index.js"
