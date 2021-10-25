@@ -1,8 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render icon in the right side when setting icon-position to right 1`] = `
+"<button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
+  <div class=\\"kuiba-button__content\\">
+    <!--v-if--><span></span><i class=\\"kuiba-icon kuiba-icon-plus\\"></i>
+  </div>
+</button>"
+`;
+
 exports[`test button example 1`] = `
 "<div class=\\"kuiba-demo-block\\">
   <h4 class=\\"kuiba-demo-block__title\\">按钮类型</h4>
-  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button\\"></button></div>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>默认按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>主要按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--success kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>成功按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--warning kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>警告按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--danger kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>危险按钮</span>
+        <!--v-if-->
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">朴素按钮</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>默认按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--plain\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>主要按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--success kuiba-button--normal kuiba-button--plain\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>成功按钮</span>
+        <!--v-if-->
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">禁用状态</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--default kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>默认按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>主要按钮</span>
+        <!--v-if-->
+      </div>
+    </button><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--success kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>成功按钮</span>
+        <!--v-if-->
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">图标按钮</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\"><i class=\\"kuiba-icon kuiba-icon-plus\\"></i><span>左侧</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>右侧</span><i class=\\"kuiba-icon kuiba-icon-plus\\"></i>
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">图标大小</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>普通</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--small\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>小型</span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--mini\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>迷你</span>
+        <!--v-if-->
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">块级元素</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--block\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if--><span>块级元素</span>
+        <!--v-if-->
+      </div>
+    </button></div>
 </div>"
 `;

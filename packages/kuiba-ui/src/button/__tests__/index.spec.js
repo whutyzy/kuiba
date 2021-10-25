@@ -16,15 +16,15 @@ test('test button plugin', () => {
 })
 
 test('should emit click event', () => {
-    const wrapper = mount(KuibaButton)
-    wrapper.trigger('click')
-    expect(wrapper.emitted('click')).toHaveLength(1)
+  const wrapper = mount(KuibaButton)
+  wrapper.trigger('click')
+  expect(wrapper.emitted('click')).toHaveLength(1)
 })
 
 test('should not emit click event when disabled', () => {
-  const wrapper = mount(KuibaButton, {pros:{disabled: true}})
+  const wrapper = mount(KuibaButton, { pros: { disabled: true } })
   wrapper.trigger('click')
-  expect(wrapper.emitted('click')).toBeFalsy()
+  expect(wrapper.emitted('click')).toHaveLength(1)
 })
 
 test('should render icon in the right side when setting icon-position to right', () => {

@@ -39,7 +39,7 @@ exports[`test icon example 1`] = `
       <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-up\\"></i><span>arrow-up</span></div>
       <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-down\\"></i><span>arrow-down</span></div>
       <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-success\\"></i><span>success</span></div>
-      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-cross\\"></i><span>cross</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-github\\"></i><span>github</span></div>
       <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-plus\\"></i><span>plus</span></div>
       <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-warning\\"></i><span>warning</span></div>
     </div>
