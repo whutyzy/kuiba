@@ -1,14 +1,86 @@
-.basic-button {
-  display: flex;
+@import '../style/var.scss';
+.kuiba-button {
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
   padding: 10px;
-  background: #009688;
-  color: #fff;
+  background: $primary-color;
+  line-height: 1.2;
   outline: none;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
-
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--block {
+    display: block;
+    width: 100%;
+  }
+  &--default {
+    background-color: $white;
+    color: $gray-6;
+    border: 1px solid $gray-4;
+  }
+  &--primary {
+    color: $white;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+  &--warning {
+    color: $white;
+    background-color: $warning-color;
+    border: 1px solid $warning-color;
+  }
+  &--danger {
+    color: $white;
+    background-color: $danger-color;
+    border: 1px solid $danger-color;
+  }
+  &--success {
+    color: $white;
+    background-color: $success-color;
+    border: 1px solid $success-color;
+  }
+  &--plain {
+    background-color: #fff;
+    &.kuiba-button--primary {
+      color: $primary-color;
+    }
+    &.kuiba-button--success {
+      color: $success-color;
+    }
+    &.kuiba-button--warning {
+      color: $warning-color;
+    }
+    &.kuiba-button--danger {
+      color: $danger-color;
+    }
+  }
+  &--normal {
+    font-size: $font-size-md;
+    padding: 8px 10px;
+  }
+  &--small {
+    font-size: $font-size-sm;
+    padding: 4px 6px;
+  }
+  &--mini {
+    font-size: $font-size-xs;
+    padding: 2px 4px;
+  }
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
   &:active {
-    opacity: 0.9
+    opacity: 0.9;
+  }
+  .kuiba-icon {
+    font-size: 12px;
   }
 }

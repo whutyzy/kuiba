@@ -22,11 +22,13 @@ export default {
 </script>
 <style lang="scss">
 .kuiba-site-mobile {
-    margin-top: 20px;
+    position: fixed;
+    right: 30px;
+    top: 88px;
     width: 375px;
     height: 725px;
     flex-shrink: 0;
-    margin-right: 38px;
+
     overflow: hidden;
     box-shadow: 0 0 14px 6px #eee;
     border-radius: 4px;
