@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test icon example 1`] = `
+"<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">基础用法</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"icon-row\\">
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\"></i></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-right\\"></i></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-up\\"></i></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-down\\"></i></div>
+    </div>
+  </div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">图标颜色</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"icon-row\\">
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\"></i></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\" style=\\"color: orange;\\"></i></div>
+    </div>
+  </div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">图标大小</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"icon-row\\">
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\" style=\\"font-size: 16px;\\"></i></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\" style=\\"font-size: 32px;\\"></i></div>
+    </div>
+  </div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">图标列表</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"icon-row\\">
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-right\\"></i><span>arrow-right</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-left\\"></i><span>arrow-left</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-up\\"></i><span>arrow-up</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-arrow-down\\"></i><span>arrow-down</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-success\\"></i><span>success</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-cross\\"></i><span>cross</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-plus\\"></i><span>plus</span></div>
+      <div class=\\"icon-example-box\\"><i class=\\"kuiba-icon kuiba-icon-warning\\"></i><span>warning</span></div>
+    </div>
+  </div>
+</div>"
+`;

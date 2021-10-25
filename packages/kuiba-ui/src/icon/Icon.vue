@@ -1,5 +1,5 @@
 <template>
-  <i :class="iconClass" :style="iconStyle"></i>
+  <i @click="$emit('click', $event)" :class="iconClass" :style="iconStyle"></i>
 </template>
 
 <script lang="ts">
@@ -14,6 +14,7 @@ export default defineComponent({
     size: { type: [String, Number] },
     classPrefix: { type: String, default: 'kuiba-icon' },
   },
+  emits: ['click'],
   setup(props) {
     const { name, color, size, classPrefix } = props
     const iconClass = computed(() => `${classPrefix} ${classPrefix}-${name}`)

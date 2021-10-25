@@ -29,7 +29,9 @@
   <kuiba-demo-block title="图标列表">
     <div class="icon-row">
       <div v-for="name in iconList" :key="name" class="icon-example-box">
-        <kuiba-icon :name="name" />
+        <kuiba-icon
+          :name="name"
+        />
         <span>{{ name }}</span>
       </div>
     </div>

@@ -60,3 +60,18 @@ Icon 的`size`用来设置图标大小，可以为数字或者字符串如`16px`
 ```html
 <kuiba-icon prefix-class="iconfont" name="warning">
 ```
+
+## API
+### Props
+| 参数 | 说明 | 类型 | 默认值
+| --- | --- | --- | --- | 
+| `name` | 图标名称 | _string_ | `-` |
+| `size` | 尺寸 | _string \| number_ | `-` |
+| `color` | 图标颜色, 只适用于字体图标 | _string_ | `-` |
+| `prefix-class` | 图标命名空间 | _string_ | `kuiba-icon` |
+
+
+### Events
+| 事件名 | 说明 | 回调参数
+| --- | --- | --- |
+| `click` | 点击图标时触发 | `event: Event` |

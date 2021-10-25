@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test button example 1`] = `
+"<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">按钮类型</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button\\"></button></div>
+</div>"
+`;
