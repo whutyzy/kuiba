@@ -45,7 +45,7 @@ export default ${bigCamelizeName}
 
     const testsTemplate = `\
 import example from '../example'
-import ${bigCamelizeName} from '..'
+import ${bigCamelizeName} from '../index'
 import { createApp } from 'vue'
 import { mount } from '@vue/test-utils'
 

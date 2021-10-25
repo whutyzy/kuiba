@@ -46,3 +46,9 @@ exports[`test icon example 1`] = `
   </div>
 </div>"
 `;
+
+exports[`test icon name 1`] = `"<i class=\\"kuiba-icon kuiba-icon-arrow-left\\"></i>"`;
+
+exports[`test icon namespace 1`] = `"<i class=\\"kuiba-icon kuiba-icon-arrow-left\\" prefixclass=\\"iconfont\\"></i>"`;
+
+exports[`test icon style 1`] = `"<i class=\\"kuiba-icon kuiba-icon-arrow-left\\" style=\\"color: red; font-size: 12px;\\"></i>"`;
