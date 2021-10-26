@@ -15,7 +15,9 @@ export const clearEmptyLine = (s: string) => s.replace(EMPTY_LINE_RE, '').replac
 export function normalizeStyleDependency(styleImport: string, reg: RegExp) {
     let relativePath = styleImport.replace(reg, '$1')
     relativePath = relativePath.replace(/(\.sass)|(\.scss)|(\.css)/, '')
-
+    if (relativePath.startsWith('~')) {
+        return relativePath
+    }
     if (relativePath.startsWith('./')) {
         return '.' + relativePath
     }
@@ -47,9 +49,15 @@ export function extractStyleDependencies(
     return code.replace(reg, '')
 }
 
-export function compileSass(file: string) {
-    const { css } = sass.renderSync({ file })
-    writeFileSync(replaceExt(file, '.css'), clearEmptyLine(css.toString()), 'utf-8')
+function scssImporterPlugin(url: string, prev: string) {
+    if (url.startsWith('~')) {
+        url = path.resolve(process.cwd(), 'node_modules', url.replace('~', '')) 
+    }
+    return { file: url }
 }
 
-
+export function compileSass(file: string) {
+    const { css } = sass.renderSync({ file, importer: scssImporterPlugin, includePaths: ['./node_modules'] })
+    writeFileSync(replaceExt(file, '.css'), clearEmptyLine(css.toString()), 'utf-8')
+}
+ 

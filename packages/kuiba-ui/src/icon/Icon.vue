@@ -26,5 +26,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '~@kuiba/icons/src/index.scss';
+@import './icon.scss';
 </style>
