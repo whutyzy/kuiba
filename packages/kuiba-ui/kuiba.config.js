@@ -57,6 +57,13 @@ module.exports = {
       },
       {
         text: {
+          'zh-CN': '浏览器适配',
+        },
+        doc: 'browserAdaptation',
+        type: 3,
+      },
+      {
+        text: {
           'zh-CN': '基础组件',
         },
         type: 1,
