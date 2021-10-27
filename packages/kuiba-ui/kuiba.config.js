@@ -82,6 +82,13 @@ module.exports = {
         doc: 'icon',
         type: 2,
       },
+      {
+        text: {
+          'zh-CN': 'Loading 加载',
+        },
+        doc: 'loading',
+        type: 2,
+      },
     ],
   },
   mobile: {

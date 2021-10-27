@@ -105,7 +105,7 @@ ${sassImports.join('\n')}
         writeFile(resolve(dir, 'index.js'), indexTemplate, 'utf-8'),
         writeFile(resolve(dir, 'umdIndex.js'), umdTemplate, 'utf-8'),
         writeFile(resolve(dir, 'style.js'), styleTemplate, 'utf-8'),
-        writeFile(resolve(dir, 'scss.js'), sassTemplate, 'utf-8')
+        writeFile(resolve(dir, 'scss.scss'), sassTemplate, 'utf-8')
     ])
 }
 

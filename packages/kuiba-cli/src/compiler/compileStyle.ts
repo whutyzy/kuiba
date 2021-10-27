@@ -35,15 +35,15 @@ export function extractStyleDependencies(
     const { dir, base } = path.parse(file)
     const styleImports = code.match(reg) ?? []
     const cssFile = path.resolve(dir, './style/index.js')
-    const sassFile = path.resolve(dir, './style/scss.js')
+    const sassFile = path.resolve(dir, './style/scss.scss')
     styleImports.forEach((styleImport: string) => {
         const normalizedPath = normalizeStyleDependency(styleImport, reg)
         smartAppendFileSync(cssFile, `import '${normalizedPath}.css'\n`)
-        smartAppendFileSync(sassFile, `import '${normalizedPath}.${expect}'\n`)
+        smartAppendFileSync(sassFile, `@import '${normalizedPath}.${expect}';\n`)
     })
     if (self) {
         smartAppendFileSync(cssFile, `import '${normalizeStyleDependency(base, reg)}.css'\n`)
-        smartAppendFileSync(sassFile, `import '${normalizeStyleDependency(base, reg)}.${expect}'\n`)
+        smartAppendFileSync(sassFile, `@import '${normalizeStyleDependency(base, reg)}.${expect}';\n`)
     }
 
     return code.replace(reg, '')

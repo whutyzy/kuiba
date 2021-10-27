@@ -64,7 +64,7 @@ export async function compileModule(modules: string | boolean = false) {
 
             if (isDir(file)) {
                 ensureFileSync(resolve(file, './style/index.js'))
-                ensureFileSync(resolve(file, './style/scss.js'))
+                ensureFileSync(resolve(file, './style/scss.scss'))
             }
             return isDir(file) ? compileDir(file) : null
         })
