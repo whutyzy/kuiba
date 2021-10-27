@@ -2,9 +2,6 @@
 
 ### Reference
 
-[@varlet/cli 中文文档](https://github.com/haoziqaq/varlet/blob/dev/packages/varlet-cli/README.md)
-[@varlet/cli documentation](https://github.com/haoziqaq/varlet/blob/dev/packages/varlet-cli/README.en-US.md)
-
 ### Quickstart
 
 ```shell
