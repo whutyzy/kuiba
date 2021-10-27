@@ -57,7 +57,7 @@ export async function compileLibraryEntry(dir: string, publicDirs: string[]) {
         )
         plugins.push(`${publicComponent}.install && app.use(${publicComponent})`)
         cssImports.push(`import './${dirname}/style'`)
-        sassImports.push(`import './${dirname}/style/scss'`)
+        sassImports.push(`@import './${dirname}/style/scss';`)
     
     })
     const install = `
