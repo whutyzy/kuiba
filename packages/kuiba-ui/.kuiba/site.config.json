@@ -44,6 +44,13 @@
       },
       {
         "text": {
+          "zh-CN": "自定义主题"
+        },
+        "doc": "customTheme",
+        "type": 3
+      },
+      {
+        "text": {
           "zh-CN": "浏览器适配"
         },
         "doc": "browserAdaptation",

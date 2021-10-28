@@ -30,6 +30,11 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/docs/browserAdaptation.zh-CN.md')
   },
   {
+    path: '/zh-CN/customTheme',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/docs/customTheme.zh-CN.md')
+  },
+  {
     path: '/zh-CN/home',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/docs/home.zh-CN.md')
