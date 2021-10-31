@@ -3,6 +3,7 @@
 exports[`should render icon in the right side when setting icon-position to right 1`] = `
 "<button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
   <div class=\\"kuiba-button__content\\">
+    <!--v-if-->
     <!--v-if--><span></span><i class=\\"kuiba-icon kuiba-icon-plus\\"></i>
   </div>
 </button>"
@@ -13,26 +14,31 @@ exports[`test button example 1`] = `
   <h4 class=\\"kuiba-demo-block__title\\">按钮类型</h4>
   <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>默认按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>主要按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--success kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>成功按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--warning kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>警告按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--danger kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>危险按钮</span>
         <!--v-if-->
       </div>
@@ -42,16 +48,19 @@ exports[`test button example 1`] = `
   <h4 class=\\"kuiba-demo-block__title\\">朴素按钮</h4>
   <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>默认按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--plain\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>主要按钮</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--success kuiba-button--normal kuiba-button--plain\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>成功按钮</span>
         <!--v-if-->
       </div>
@@ -61,16 +70,19 @@ exports[`test button example 1`] = `
   <h4 class=\\"kuiba-demo-block__title\\">禁用状态</h4>
   <div class=\\"kuiba-demo-block__container\\"><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--default kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>默认按钮</span>
         <!--v-if-->
       </div>
     </button><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>主要按钮</span>
         <!--v-if-->
       </div>
     </button><button disabled=\\"\\" class=\\"kuiba-button kuiba-button--success kuiba-button--normal kuiba-button--disabled\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>成功按钮</span>
         <!--v-if-->
       </div>
@@ -79,11 +91,13 @@ exports[`test button example 1`] = `
 <div class=\\"kuiba-demo-block\\">
   <h4 class=\\"kuiba-demo-block__title\\">图标按钮</h4>
   <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
-      <div class=\\"kuiba-button__content\\"><i class=\\"kuiba-icon kuiba-icon-plus\\"></i><span>左侧</span>
+      <div class=\\"kuiba-button__content\\"><i class=\\"kuiba-icon kuiba-icon-plus\\"></i>
+        <!--v-if--><span>左侧</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>右侧</span><i class=\\"kuiba-icon kuiba-icon-plus\\"></i>
       </div>
     </button></div>
@@ -92,17 +106,42 @@ exports[`test button example 1`] = `
   <h4 class=\\"kuiba-demo-block__title\\">图标大小</h4>
   <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--default kuiba-button--normal\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>普通</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--small\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>小型</span>
         <!--v-if-->
       </div>
     </button><button class=\\"kuiba-button kuiba-button--default kuiba-button--mini\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>迷你</span>
+        <!--v-if-->
+      </div>
+    </button></div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">加载状态</h4>
+  <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
+        <div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: currentColor; width: 16px; height: 16px;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div><span></span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
+        <div class=\\"kuiba-loading kuiba-loading--spinner\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--spinner\\" style=\\"color: currentColor; width: 16px; height: 16px;\\"><i class=\\"kuiba-loading__line kuiba-loading__line--1\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--2\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--3\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--4\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--5\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--6\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--7\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--8\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--9\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--10\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--11\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--12\\"></i></span></div><span></span>
+        <!--v-if-->
+      </div>
+    </button><button class=\\"kuiba-button kuiba-button--success kuiba-button--normal\\" type=\\"button\\">
+      <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
+        <div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: currentColor; width: 16px; height: 16px;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div><span>加载中</span>
         <!--v-if-->
       </div>
     </button></div>
@@ -111,6 +150,7 @@ exports[`test button example 1`] = `
   <h4 class=\\"kuiba-demo-block__title\\">块级元素</h4>
   <div class=\\"kuiba-demo-block__container\\"><button class=\\"kuiba-button kuiba-button--primary kuiba-button--normal kuiba-button--block\\" type=\\"button\\">
       <div class=\\"kuiba-button__content\\">
+        <!--v-if-->
         <!--v-if--><span>块级元素</span>
         <!--v-if-->
       </div>

@@ -28,7 +28,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .kuiba-demo-block {
     .kuiba-loading {
         display: inline-block;

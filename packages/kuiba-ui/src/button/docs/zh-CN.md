@@ -63,6 +63,8 @@ createApp().use(Button)
 | block | 是否为块级元素 | _boolean_ | `false` |
 | plain | 是否为朴素按钮 | _boolean_ | `false` |
 | disabled | 是否禁用按钮 | _boolean_ | `false` |
+| loading | 加载状态 | _boolean_ | `false` |
+| loading-type | 加载状态类型,可选值为`spinner` | _string_ | `circle` |
 
 
 ### Events

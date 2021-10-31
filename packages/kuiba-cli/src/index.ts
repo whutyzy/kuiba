@@ -35,5 +35,6 @@ program
     .option('-u, --updateSnapshot', 'Update component snapshot')
     .option('-c, --component <componentName>', 'Test a specific component')
     .option('-cc --clearCache', 'Clear test cache')
+    .option('-d --debug', 'Debug the unit test')
     .action(jest)
 program.parse()

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`circle-props 1`] = `"<div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: rgb(239, 239, 239); width: 24px; height: 24px;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>"`;
+
+exports[`spinner-props 1`] = `"<div class=\\"kuiba-loading kuiba-loading--spinner\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--spinner\\" style=\\"color: rgb(239, 239, 239); width: 24px; height: 24px;\\"><i class=\\"kuiba-loading__line kuiba-loading__line--1\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--2\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--3\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--4\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--5\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--6\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--7\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--8\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--9\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--10\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--11\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--12\\"></i></span></div>"`;
+
+exports[`test loading example 1`] = `
+"<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">类型</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: currentColor;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+    <div class=\\"kuiba-loading kuiba-loading--spinner\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--spinner\\" style=\\"color: currentColor;\\"><i class=\\"kuiba-loading__line kuiba-loading__line--1\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--2\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--3\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--4\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--5\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--6\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--7\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--8\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--9\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--10\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--11\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--12\\"></i></span></div>
+  </div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">颜色</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: orange;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+    <div class=\\"kuiba-loading kuiba-loading--spinner\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--spinner\\" style=\\"color: pink;\\"><i class=\\"kuiba-loading__line kuiba-loading__line--1\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--2\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--3\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--4\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--5\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--6\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--7\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--8\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--9\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--10\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--11\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--12\\"></i></span></div>
+  </div>
+</div>
+<div class=\\"kuiba-demo-block\\">
+  <h4 class=\\"kuiba-demo-block__title\\">大小</h4>
+  <div class=\\"kuiba-demo-block__container\\">
+    <div class=\\"kuiba-loading kuiba-loading--circle\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--circle\\" style=\\"color: currentColor; width: 48px; height: 48px;\\"><svg class=\\"kuiba-loading__circle\\" viewBox=\\"25 25 50 50\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"20\\" fill=\\"none\\"></circle></svg></span></div>
+    <div class=\\"kuiba-loading kuiba-loading--spinner\\"><span class=\\"kuiba-loading__spinner kuiba-loading__spinner--spinner\\" style=\\"color: currentColor; width: 48px; height: 48px;\\"><i class=\\"kuiba-loading__line kuiba-loading__line--1\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--2\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--3\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--4\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--5\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--6\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--7\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--8\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--9\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--10\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--11\\"></i><i class=\\"kuiba-loading__line kuiba-loading__line--12\\"></i></span></div>
+  </div>
+</div>"
+`;
