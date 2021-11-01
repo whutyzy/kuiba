@@ -10,6 +10,16 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/icon/docs/zh-CN.md')
   },
   {
+    path: '/en-US/image',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/image/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/image',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/image/docs/zh-CN.md')
+  },
+  {
     path: '/en-US/loading',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/docs/en-US.md')

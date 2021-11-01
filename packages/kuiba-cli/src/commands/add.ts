@@ -25,11 +25,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.${namespace}-${name} {
-  display: flex;
-}
+@import "../${name}.scss"
 </style>
 `
+    const scssTemplate = `\
+.${namespace}-${name} {
+    
+}`
+
     const indexTemplate = `\
 import ${bigCamelizeName} from './${bigCamelizeName}.vue'
 import type { App } from 'vue'
@@ -101,6 +104,7 @@ export default {
 
     await Promise.all([
         outputFile(resolve(componentDir, `${bigCamelizeName}.vue`), vueTemplate),
+        outputFile(resolve(componentDir, `${name}.scss`), scssTemplate),
         outputFile(resolve(componentDir, 'index.ts'), indexTemplate),
         outputFile(resolve(testsDir, 'index.spec.js'), testsTemplate),
         outputFile(resolve(exampleDir, 'index.vue'), exampleTemplate),
