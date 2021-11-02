@@ -20,6 +20,16 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/image/docs/zh-CN.md')
   },
   {
+    path: '/en-US/lazyload',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/lazyload/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/lazyload',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/lazyload/docs/zh-CN.md')
+  },
+  {
     path: '/en-US/loading',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/docs/en-US.md')

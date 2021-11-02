@@ -89,6 +89,19 @@
         },
         "doc": "image",
         "type": 2
+      },
+      {
+        "text": {
+          "zh-CN": "通用指令"
+        },
+        "type": 1
+      },
+      {
+        "text": {
+          "zh-CN": "懒加载"
+        },
+        "doc": "lazyload",
+        "type": 2
       }
     ],
     "redirect": "/home",

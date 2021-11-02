@@ -15,6 +15,11 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/image/example/index.vue')
   },
   {
+    path: '/lazyload',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/lazyload/example/index.vue')
+  },
+  {
     path: '/loading',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/example/index.vue')

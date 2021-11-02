@@ -17,6 +17,7 @@
         />
         <img
             v-if="src && !isLoadingFailed && lazyload"
+            v-lazyload="src"
             :src="src"
             class="kuiba-image__img"
             :style="{ objectFit: fit }"
@@ -28,6 +29,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, computed, watch, CSSProperties, PropType } from 'vue'
+import Lazyload from '../lazyload'
 import { addUnit } from '../utils/format/unit'
 import { isDef } from '../utils/validate'
 
@@ -45,6 +47,7 @@ export default defineComponent({
         showLoading: { type: Boolean, default: true }
     },
     emits: ['load', 'error'],
+    directives:{ Lazyload },
     setup(props, { emit }) {
         const loading = ref(!!props.src)
         const isLoadingFailed = ref(!props.src)
