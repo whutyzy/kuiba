@@ -27,7 +27,13 @@ test('test lazyload plugin', () => {
     expect(app.component(Lazyload.name)).toBeTruthy()
 })
 
-test('should load when img in viewport', () => {})
-test('should attempt to load when  loaderror', () => {})
+test('should load when img in viewport', () => {
+    //todo
+})
+test('should attempt to load when  loaderror', () => {
+    //todo
+})
 
-test('should update img src when binding change', () => {})
+test('should update img src when binding change', () => {
+    //todo
+})
