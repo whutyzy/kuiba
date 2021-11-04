@@ -10,15 +10,17 @@ module.exports = (api?: ConfigAPI, options: PresetOption = {}) => {
         api.cache.never()
     }
 
-    const isTest = process.env.NODE_ENV === 'test'
-
+    const { BABEL_MODULE, NODE_ENV } = process.env
+    const isTest = NODE_ENV === 'test'
+    const useESModules = BABEL_MODULE !== 'commonjs' && !isTest
+    
     return {
         compact: false,
         presets: [
             [
                 require.resolve('@babel/preset-env'),
                 {
-                    modules: isTest ? 'commonjs' : false,
+                    modules: useESModules ? false : 'commonjs',
                     loose: options.loose
                 }
             ],

@@ -1,0 +1,40 @@
+{
+    "name": "@kuiba/use",
+    "version": "0.0.1",
+    "description": "Kuiba Composition API",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "typings": "dist/types/index.d.ts",
+    "sideEffects": false,
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "build:lib": "node ./scripts/build.js",
+        "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+        "build": "yarn build:lib && yarn build:types",
+        "release": "yarn build && release-it"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/whutyzy/kuiba.git"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.9",
+        "fast-glob": "^3.2.7",
+        "release-it": "^14.0.2",
+        "typescript": "^4.0.2"
+    },
+    "release-it": {
+        "git": {
+            "tag": false,
+            "commitMessage": "release: @kuiba/use ${version}"
+        }
+    }
+}
