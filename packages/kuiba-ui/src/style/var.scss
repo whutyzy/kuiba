@@ -35,3 +35,8 @@ $border-radius-sm: 2px;
 $border-radius-md: 4px;
 $border-radius-lg: 8px;
 $border-radius-max: 999px;
+
+// Animation
+$animation-duration-base: 0.3s;
+$animation-timing-function-enter: ease-out;
+$animation-timing-function-leave: ease-in;

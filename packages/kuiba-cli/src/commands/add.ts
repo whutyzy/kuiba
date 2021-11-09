@@ -25,7 +25,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "../${name}.scss"
+@import "./${name}.scss"
 </style>
 `
     const scssTemplate = `\

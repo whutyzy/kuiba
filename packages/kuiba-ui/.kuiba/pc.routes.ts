@@ -40,9 +40,39 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/docs/zh-CN.md')
   },
   {
+    path: '/en-US/overlay',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/overlay/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/overlay',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/overlay/docs/zh-CN.md')
+  },
+  {
+    path: '/en-US/popup',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/popup/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/popup',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/popup/docs/zh-CN.md')
+  },
+  {
     path: '/zh-CN/style',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/style/docs/zh-CN.md')
+  },
+  {
+    path: '/en-US/toast',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/toast/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/toast',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/toast/docs/zh-CN.md')
   },
   {
     path: '/zh-CN/browserAdaptation',

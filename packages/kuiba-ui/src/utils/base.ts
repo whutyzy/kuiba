@@ -1,3 +1,8 @@
+import { PropType } from "vue"
+
+export const extend = Object.assign
+export const noop = () => { }
+ 
 export const removeItem = (arr: Array<unknown>, item: unknown) => {
     if (arr.length) {
         const index: number = arr.indexOf(item)
@@ -85,3 +90,11 @@ export function createCache<T>(max: number): CacheInstance<T> {
         }
     }
 }
+
+
+// PropTypes
+export const unknownProp = (null as unknown) as PropType<unknown>;
+export const truthProp = {
+  type: Boolean,
+  default: true as const,
+};

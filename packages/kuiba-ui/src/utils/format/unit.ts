@@ -18,3 +18,11 @@ export function getSizeStyle(originSize?: string | number): CSSProperties | unde
         }
     }
 }
+
+export function getZIndexStyle(zIndex?: string | number) {
+    const style: CSSProperties = {}
+    if (zIndex !== undefined) {
+        style.zIndex = +zIndex
+    }
+    return style
+}

@@ -25,8 +25,23 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/example/index.vue')
   },
   {
+    path: '/overlay',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/overlay/example/index.vue')
+  },
+  {
+    path: '/popup',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/popup/example/index.vue')
+  },
+  {
     path: '/style',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/style/example/index.vue')
+  },
+  {
+    path: '/toast',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/toast/example/index.vue')
   }
 ]

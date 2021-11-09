@@ -105,6 +105,33 @@ module.exports = {
             },
             {
                 text: {
+                    'zh-CN': 'Popup 弹出层'
+                },
+                doc: 'popup',
+                type: 2
+            },
+            {
+                text: {
+                    'zh-CN': 'Toast 轻提示'
+                },
+                doc: 'toast',
+                type: 2
+            },
+            {
+                text: {
+                    'zh-CN': '反馈组件'
+                },
+                type: 1
+            },
+            {
+                text: {
+                    'zh-CN': '遮罩层'
+                },
+                doc: 'overlay',
+                type: 2
+            },
+            {
+                text: {
                     'zh-CN': '通用指令'
                 },
                 type: 1
