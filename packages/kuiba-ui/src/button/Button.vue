@@ -12,7 +12,7 @@
 <script lang="ts">
 import Icon from '../icon/index'
 import Loading from '../loading/index'
-import { defineComponent, computed, PropType, ButtonHTMLAttributes } from 'vue'
+import { defineComponent, computed, toRefs, PropType, ButtonHTMLAttributes } from 'vue'
 
 export default defineComponent({
     name: 'KuibaButton',
@@ -35,23 +35,22 @@ export default defineComponent({
     },
     emits: ['click'],
     setup(props, { emit }) {
-        const { type, size, plain, loading, block, disabled } = props
         const className = computed(() => {
             const result = [
                 'kuiba-button',
-                `kuiba-button--${type}`,
-                size ? `kuiba-button--${size}` : '',
-                plain ? 'kuiba-button--plain' : '',
-                block ? 'kuiba-button--block' : '',
-                disabled ? 'kuiba-button--disabled' : ''
+                `kuiba-button--${props.type}`,
+                props.size ? `kuiba-button--${props.size}` : '',
+                props.plain ? 'kuiba-button--plain' : '',
+                props.block ? 'kuiba-button--block' : '',
+                props.disabled ? 'kuiba-button--disabled' : ''
             ]
             return result
         })
         const onClick = (event: MouseEvent) => {
-            if (loading || disabled) {
-                event.preventDefault();
-            } else{
-                emit('click',event)
+            if (props.loading || props.disabled) {
+                event.preventDefault()
+            } else {
+                emit('click', event)
             }
         }
         return { className, onClick }

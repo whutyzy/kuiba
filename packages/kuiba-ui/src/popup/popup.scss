@@ -1,3 +1,83 @@
+@import '../style/var.scss';
+
 .kuiba-popup {
-    
+    position: fixed;
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    transition: transform $animation-duration-base;
+    &__head {
+        display: flex;
+        position: relative;
+        height: 32px;
+    }
+    &__close-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: $gray-6;
+    }
+    &--center {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &--top {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &--right {
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &--bottom {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &--left {
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    &-slide-top-enter-active,
+    &-slide-left-enter-active,
+    &-slide-right-enter-active,
+    &-slide-bottom-enter-active {
+        transition-timing-function: $animation-timing-function-enter;
+    }
+
+    &-slide-top-leave-active,
+    &-slide-left-leave-active,
+    &-slide-right-leave-active,
+    &-slide-bottom-leave-active {
+        transition-timing-function: $animation-timing-function-leave;
+    }
+
+    &-slide-top-enter-from,
+    &-slide-top-leave-active {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    &-slide-right-enter-from,
+    &-slide-right-leave-active {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    &-slide-bottom-enter-from,
+    &-slide-bottom-leave-active {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    &-slide-left-enter-from,
+    &-slide-left-leave-active {
+        transform: translate3d(-100%, -0%, 0);
+    }
 }

@@ -125,7 +125,7 @@ module.exports = {
             },
             {
                 text: {
-                    'zh-CN': '遮罩层'
+                    'zh-CN': 'Overlay 遮罩层'
                 },
                 doc: 'overlay',
                 type: 2
@@ -138,7 +138,7 @@ module.exports = {
             },
             {
                 text: {
-                    'zh-CN': '懒加载'
+                    'zh-CN': 'Lazyload 懒加载'
                 },
                 doc: 'lazyload',
                 type: 2

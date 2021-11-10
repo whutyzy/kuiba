@@ -1,49 +1,54 @@
 @font-face {
-    font-family: 'kuiba-icon'; /* Project id 2881971 */
-    src: url('//at.alicdn.com/t/font_2881971_kfw637oetce.woff2?t=1634870259436') format('woff2'),
-        url('//at.alicdn.com/t/font_2881971_kfw637oetce.woff?t=1634870259436') format('woff'),
-        url('//at.alicdn.com/t/font_2881971_kfw637oetce.ttf?t=1634870259436') format('truetype');
+  font-family: "kuiba-icon"; /* Project id 2881971 */
+  src: url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.woff2?t=1636537385299') format('woff2'),
+       url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.woff?t=1636537385299') format('woff'),
+       url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.ttf?t=1636537385299') format('truetype');
 }
 
 .kuiba-icon {
-    font-family: 'kuiba-icon' !important;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "kuiba-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kuiba-icon-close:before {
+  content: "\e74c";
 }
 
 .kuiba-icon-warning:before {
-    content: '\e62c';
+  content: "\e62c";
 }
 
 .kuiba-icon-arrow-down:before {
-    content: '\ef25';
+  content: "\ef25";
 }
 
 .kuiba-icon-arrow-up:before {
-    content: '\ef2a';
+  content: "\ef2a";
 }
 
 .kuiba-icon-plus:before {
-    content: '\e67b';
+  content: "\e67b";
 }
 
 .kuiba-icon-close-cross:before {
-    content: '\e688';
+  content: "\e688";
 }
 
 .kuiba-icon-success:before {
-    content: '\e6b6';
+  content: "\e6b6";
 }
 
 .kuiba-icon-arrow-right:before {
-    content: '\e628';
+  content: "\e628";
 }
 
 .kuiba-icon-github:before {
-    content: '\e63a';
+  content: "\e63a";
 }
 
 .kuiba-icon-arrow-left:before {
-    content: '\e685';
+  content: "\e685";
 }

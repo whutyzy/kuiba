@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, CSSProperties } from 'vue'
+import { defineComponent, computed, PropType, CSSProperties } from 'vue'
 
 import { getZIndexStyle, extend, noop, preventDefault, truthProp, unknownProp, isDef } from '../utils'
 export default defineComponent({
@@ -26,15 +26,17 @@ export default defineComponent({
         customStyle: Object as PropType<CSSProperties>
     },
     setup(props) {
-        let { customStyle, zIndex } = props
-
-        const style = extend(getZIndexStyle(zIndex), customStyle)
+        const style = computed(() => {
+            const _style = extend(getZIndexStyle(props.zIndex), props.customStyle)
+            if (isDef(props.duration)) {
+                _style.animationDuration = `${props.duration}s`
+            }
+            return  _style
+        })
         const preventTouchMove = (event: TouchEvent) => {
             preventDefault(event, true)
         }
-        if (isDef(props.duration)) {
-            style.animationDuration = `${props.duration}s`
-        }
+
         return { style, preventTouchMove, noop }
     }
 })
