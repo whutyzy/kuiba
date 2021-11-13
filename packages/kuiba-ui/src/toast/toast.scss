@@ -1,3 +1,67 @@
+@import '../style/var.scss';
+
 .kuiba-toast {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+
+    min-width: 88px;
+    max-width: 70%;
+    padding: 4px;
+    min-height: 88px;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    white-space: pre-line;
+    text-align: center;
+    word-break: break-all;
+    border-radius: 4px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    &--unclickable {
+        // lock scroll
+        overflow: hidden;
+        cursor: not-allowed;
+
+        // should not add pointer-events: none directly to body tag
+        // that will cause unexpected tap-highlight-color in mobile safari
+        * {
+            pointer-events: none;
+        }
+    }
+    &--text {
+        width: fit-content;
+        min-height: 0;
+        min-width: 96px;
+        padding: 6px;
+        .kuiba-toast__text {
+            margin-top: 0;
+        }
+    }
+    &--top {
+        top: 30%;
+    }
+
+    &--bottom {
+        top: auto;
+        bottom: 30%;
+    }
+    &__icon {
+        font-size: 16px;
+    }
+
+    &__loading {
+        padding: 4px;
+        color: #fff;
+    }
+
+    &__text {
+        margin-top: 6px;
+    }
 }

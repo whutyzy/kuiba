@@ -1,14 +1,14 @@
-import { createApp, reactive, Component, nextTick } from 'vue'
+import { createApp, reactive,h, Component, nextTick } from 'vue'
 import { extend } from './base'
 import { useExpose } from '../composables/use-expose'
 
 export function usePopupState() {
-    const state = reactive<{ show: boolean; [key: string]: any }>({
-        show: false
+    const state = reactive<{ visible: boolean; [key: string]: any }>({
+        visible: false
     })
 
-    const toggle = (show: boolean) => {
-        state.show = show
+    const toggle = (visible: boolean) => {
+        state.visible = visible
     }
 
     const open = (props: Record<string, any>) => {
@@ -36,4 +36,17 @@ export function mountComponent(RootComponent: Component) {
             document.body.removeChild(root)
         }
     }
+}
+
+export function mountInstance(
+    component: any,
+    props: Record<string, any> = {},
+    eventListener: Record<string, any> = {}
+) {
+    const Host = {
+        setup() {
+            return ()=>h(component,{...props,...eventListener})
+        }
+    }
+    return mountComponent(Host)
 }

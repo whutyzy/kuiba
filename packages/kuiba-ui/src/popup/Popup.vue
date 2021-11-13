@@ -2,15 +2,15 @@
     <Teleport v-if="teleport" :to="teleport">
         <kuiba-overlay
             v-if="overlayVisible"
-            :customStyle="overlayStyle"
+            :custom-style="overlayStyle"
             :class="overlayClass"
             :visible="visible"
-            :zIndex="popupZIndex"
+            :z-index="popupZIndex"
             @click="onClickOverlay"
         ></kuiba-overlay>
         <Transition :name="transitionName" @after-enter="onOpened" @after-leave="onClosed">
             <div v-show="visible" :class="popupClass" :style="style" ref="popupRef" @click="onClick" v-bind="$attrs">
-                <div class="kuiba-popup__head">
+                <div v-show="closeIconVisible || title" class="kuiba-popup__head">
                     <h6 class="kuiba-popup__title">{{ title }}</h6>
                     <kuiba-icon
                         v-if="closeIconVisible"
@@ -19,23 +19,24 @@
                         @click="onClickCloseIcon"
                     ></kuiba-icon>
                 </div>
-                <div class="kuiba-popup__content"></div>
-                <slot></slot>
+                <div class="kuiba-popup__content">
+                    <slot></slot>
+                </div>
             </div>
         </Transition>
     </Teleport>
     <template v-else>
         <kuiba-overlay
             v-if="overlayVisible"
-            :customStyle="overlayStyle"
+            :custom-style="overlayStyle"
             :class="overlayClass"
             :visible="visible"
-            :zIndex="popupZIndex"
+            :z-index="popupZIndex"
             @click="onClickOverlay"
         ></kuiba-overlay>
         <Transition :name="transitionName" @after-enter="onOpened" @after-leave="onClosed">
             <div v-show="visible" :class="popupClass" :style="style" ref="popupRef" @click="onClick" v-bind="$attrs">
-                <div class="kuiba-popup__head">
+                <div v-show="closeIconVisible || title" class="kuiba-popup__head">
                     <h6 class="kuiba-popup__title">{{ title }}</h6>
                     <kuiba-icon
                         v-if="closeIconVisible"
@@ -44,8 +45,9 @@
                         @click="onClickCloseIcon"
                     ></kuiba-icon>
                 </div>
-                <div class="kuiba-popup__content"></div>
-                <slot></slot>
+                <div class="kuiba-popup__content">
+                    <slot></slot>
+                </div>
             </div>
         </Transition>
     </template>

@@ -1,4 +1,4 @@
-import { PropType } from "vue"
+import { PropType, ComponentPublicInstance  } from 'vue'
 
 export const extend = Object.assign
 export const noop = () => { }
@@ -90,7 +90,8 @@ export function createCache<T>(max: number): CacheInstance<T> {
         }
     }
 }
-
+// eslint-disable-next-line
+export type ComponentInstance = ComponentPublicInstance<{}, any>;
 
 // PropTypes
 export const unknownProp = (null as unknown) as PropType<unknown>;

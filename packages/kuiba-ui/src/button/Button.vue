@@ -12,7 +12,7 @@
 <script lang="ts">
 import Icon from '../icon/index'
 import Loading from '../loading/index'
-import { defineComponent, computed, toRefs, PropType, ButtonHTMLAttributes } from 'vue'
+import { defineComponent, computed,  PropType, ButtonHTMLAttributes } from 'vue'
 
 export default defineComponent({
     name: 'KuibaButton',

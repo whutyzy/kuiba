@@ -1,8 +1,8 @@
 @font-face {
   font-family: "kuiba-icon"; /* Project id 2881971 */
-  src: url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.woff2?t=1636537385299') format('woff2'),
-       url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.woff?t=1636537385299') format('woff'),
-       url('//at.alicdn.com/t/font_2881971_4nft4hm0qlh.ttf?t=1636537385299') format('truetype');
+  src: url('//at.alicdn.com/t/font_2881971_hpibvrmx866.woff2?t=1636709445392') format('woff2'),
+       url('//at.alicdn.com/t/font_2881971_hpibvrmx866.woff?t=1636709445392') format('woff'),
+       url('//at.alicdn.com/t/font_2881971_hpibvrmx866.ttf?t=1636709445392') format('truetype');
 }
 
 .kuiba-icon {
@@ -17,7 +17,7 @@
   content: "\e74c";
 }
 
-.kuiba-icon-warning:before {
+.kuiba-icon-fail:before {
   content: "\e62c";
 }
 
