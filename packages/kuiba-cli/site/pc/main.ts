@@ -27,5 +27,7 @@ Object.defineProperty(window, 'onMobileRouteChange', {
     }
 })
 
-createApp(App).use(router).mount('#app')
+const instance = createApp(App).use(router).mount('#app')
+
+console.log(instance)
 // createApp(App).mount('#app')

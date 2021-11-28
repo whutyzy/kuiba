@@ -1,4 +1,4 @@
-import { createApp, reactive,h, Component, nextTick } from 'vue'
+import { createApp, reactive, h, Component, nextTick } from 'vue'
 import { extend } from './base'
 import { useExpose } from '../composables/use-expose'
 
@@ -28,6 +28,8 @@ export function usePopupState() {
 export function mountComponent(RootComponent: Component) {
     const app = createApp(RootComponent)
     const root = document.createElement('div')
+    console.log(root)
+    root.className = 'demo'
     document.body.appendChild(root)
     return {
         instance: app.mount(root),
@@ -45,7 +47,7 @@ export function mountInstance(
 ) {
     const Host = {
         setup() {
-            return ()=>h(component,{...props,...eventListener})
+            return () => h(component, { ...props, ...eventListener })
         }
     }
     return mountComponent(Host)

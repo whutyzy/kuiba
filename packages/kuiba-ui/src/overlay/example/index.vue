@@ -6,7 +6,7 @@
     <kuiba-demo-block title="嵌入内容">
         <kuiba-button type="primary" @click="overlay2Visible = true">嵌入内容</kuiba-button>
         <kuiba-overlay @click="overlay2Visible = false" :visible="overlay2Visible"
-            ><div class="center"></div>
+            ><div class="middle"></div>
         </kuiba-overlay>
     </kuiba-demo-block>
 </template>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style>
-.center {
+.middle {
     width: 200px;
     height: 200px;
     background-color: #fff;

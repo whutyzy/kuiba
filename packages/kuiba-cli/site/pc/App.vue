@@ -21,7 +21,7 @@
 // @ts-ignore
 import config from '@config'
 import { onBeforeRouteUpdate, useRoute, useRouter } from 'vue-router'
-import { defineComponent, ref, nextTick, onMounted, watch } from 'vue'
+import { defineComponent, ref, nextTick, onMounted, watch, getCurrentInstance } from 'vue'
 import { get } from 'lodash'
 import AppMobile from './components/AppMobile.vue'
 import AppHeader from './components/AppHeader.vue'
@@ -40,6 +40,7 @@ export interface Menu {
 export default defineComponent({
     components: { AppMobile, AppHeader, AppSidebar },
     setup() {
+        console.log(getCurrentInstance())
         const defaultLanguage = get(config, 'defaultLanguage')
         const useMobile = ref(get(config, 'useMobile'))
         const menu: Ref<Menu[]> = ref(get(config, 'pc.menu', []))

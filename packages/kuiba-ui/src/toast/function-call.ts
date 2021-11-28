@@ -84,6 +84,7 @@ function createInstance() {
             const render = () => h(KuibaToast, { ...state, ...eventListeners })
             ;(getCurrentInstance() as any).render = render
             return { open, clear: close, message }
+            // return render
         }
     }
     const { instance, unmount } = mountComponent(Host)

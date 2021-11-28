@@ -72,7 +72,7 @@ export default {
 | --- | --- | --- | --- |
 | v-model:visible | 是否显示弹出层 | _boolean_ | `false` |
 | overlayVisible | 是否显示遮罩层 | _boolean_ | `true` |
-| position | 弹出位置，可选值为 `top` `bottom` `right` `left` | _string_ | `center` |
+| position | 弹出位置，可选值为 `top` `bottom` `right` `left` | _string_ | `middle` |
 | overlay-class | 自定义遮罩层类名 | _string \| Array \| object_ | - |
 | overlay-style | 自定义遮罩层样式 | _object_ | - |
 | lock-scroll | 是否锁定背景滚动 | _boolean_ | `true` |

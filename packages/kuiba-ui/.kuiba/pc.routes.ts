@@ -5,6 +5,16 @@ export default [
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/button/docs/zh-CN.md')
   },
   {
+    path: '/en-US/dialog',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/dialog/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/dialog',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/dialog/docs/zh-CN.md')
+  },
+  {
     path: '/zh-CN/icon',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/icon/docs/zh-CN.md')
@@ -38,6 +48,16 @@ export default [
     path: '/zh-CN/loading',
     // @ts-ignore
     component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/loading/docs/zh-CN.md')
+  },
+  {
+    path: '/en-US/notify',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/notify/docs/en-US.md')
+  },
+  {
+    path: '/zh-CN/notify',
+    // @ts-ignore
+    component: () => import('D:/code/my-code/kuiba/packages/kuiba-ui/src/notify/docs/zh-CN.md')
   },
   {
     path: '/en-US/overlay',

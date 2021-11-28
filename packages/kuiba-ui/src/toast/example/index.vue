@@ -1,6 +1,6 @@
 <template>
     <kuiba-demo-block title="基础演示">
-        <kuiba-button @click="showToast">文字提示</kuiba-button>
+        <kuiba-button @click="showToast('text')">文字提示</kuiba-button>
         <kuiba-button @click="showToast('loading')">加载提示</kuiba-button>
         <kuiba-button @click="showToast('success')">成功提示</kuiba-button>
         <kuiba-button @click="showToast('fail')">失败提示</kuiba-button>
@@ -38,7 +38,7 @@ export default {
             let second = 3
             const toast = Toast(`${second}s后关闭`)
             let timer = setInterval(() => {
-                if (second <= 0) {
+                if (second <= 1) {
                     clearInterval(timer)
                     toast.clear()
                 }

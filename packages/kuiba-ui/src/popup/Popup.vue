@@ -76,7 +76,7 @@ import Overlay from '../overlay'
 import { useExpose } from '../composables/use-expose'
 import { useLockScroll } from '../composables/use-lock-scroll'
 import { POPUP_TOGGLE_KEY } from '../composables/on-popup-reopen'
-export type PopupPosition = 'top' | 'left' | 'bottom' | 'right' | 'center' | ''
+export type PopupPosition = 'top' | 'left' | 'bottom' | 'right' | 'middle' | ''
 let globalZIndex = 2000
 
 export default defineComponent({
@@ -91,7 +91,7 @@ export default defineComponent({
         closeOnPopstate: Boolean,
         position: {
             type: String as PropType<PopupPosition>,
-            default: 'center'
+            default: 'middle'
         }
     }),
     emits: ['open', 'close', 'click', 'opened', 'closed', 'update:visible', 'click-overlay', 'click-close-icon'],
@@ -141,7 +141,7 @@ export default defineComponent({
             emit('click-close-icon', event)
         }
         const transitionName = computed(() => {
-            return props.position === 'center' ? 'kuiba-fade' : `kuiba-popup-slide-${props.position}`
+            return props.position === 'middle' ? 'kuiba-fade' : `kuiba-popup-slide-${props.position}`
         })
         const popupClass = computed(() => {
             return ['kuiba-popup', `kuiba-popup--${props.position}`]
