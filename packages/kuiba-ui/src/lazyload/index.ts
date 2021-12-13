@@ -94,7 +94,6 @@ function attemptLoad(el: LazyHTMLElement) {
 
 function check(el: LazyHTMLElement) {
     if (inViewport(el)) {
-        console.log('check')
         attemptLoad(el)
     }
 }
