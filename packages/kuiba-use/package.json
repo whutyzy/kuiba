@@ -1,6 +1,6 @@
 {
     "name": "@kuiba/use",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Kuiba Composition API",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
