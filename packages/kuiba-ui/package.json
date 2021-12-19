@@ -74,7 +74,7 @@
     "@kuiba/icons": "^0.0.4"
   },
   "devDependencies": {
-    "@kuiba/cli": "^0.0.3"
+    "@kuiba/cli": "^0.0.11"
   },
   "gitHead": "b86dcacf701bdc602e3e236b4e0773ffefbe89fc"
 }
