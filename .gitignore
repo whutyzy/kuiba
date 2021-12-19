@@ -25,5 +25,6 @@ pnpm-debug.log*
 packages/kuiba-cli/lib
 packages/kuiba-ui/es
 packages/kuiba-ui/umd
+packages/kuiba-ui/.kuiba
 packages/kuiba-ui/coverage
 

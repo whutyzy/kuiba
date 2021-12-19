@@ -8,6 +8,7 @@ import { get } from 'lodash'
 export function getUmdConfig() {
     const kuibaConfig = getKuibaConfig()
     const name = get(kuibaConfig, 'name')
+    
     return merge(BASE_CONFIG, {
         mode: 'production',
         entry: resolve(ES_DIR, 'umdIndex.js'),
