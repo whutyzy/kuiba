@@ -1,0 +1,1 @@
+export var inBrowser = typeof window !== 'undefined';
