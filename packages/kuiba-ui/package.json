@@ -71,7 +71,8 @@
     "README.md"
   ],
   "dependencies": {
-    "@kuiba/icons": "^0.0.4"
+    "@kuiba/icons": "^0.0.4",
+    "@kuiba/use": "^0.0.2"
   },
   "devDependencies": {
     "@kuiba/cli": "^0.0.14"
