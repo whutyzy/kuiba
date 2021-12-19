@@ -22,7 +22,7 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-packages/kuiba-cli/lib
+# packages/kuiba-cli/lib
 packages/kuiba-ui/es
 packages/kuiba-ui/umd
 packages/kuiba-ui/.kuiba
