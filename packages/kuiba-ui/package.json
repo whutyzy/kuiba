@@ -1,6 +1,6 @@
 {
   "name": "@kuiba/ui",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A mobile vue3 components library",
   "module": "es/index.js",
   "typings": "types/index.d.ts",
@@ -72,10 +72,10 @@
   ],
   "dependencies": {
     "@kuiba/icons": "^0.0.4",
-    "@kuiba/use": "^0.0.2"
+    "@kuiba/use": "^0.0.3"
   },
   "devDependencies": {
-    "@kuiba/cli": "^0.0.14"
+    "@kuiba/cli": "^0.0.15"
   },
   "gitHead": "b86dcacf701bdc602e3e236b4e0773ffefbe89fc"
 }
